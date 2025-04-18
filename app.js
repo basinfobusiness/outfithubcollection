@@ -22,6 +22,10 @@ const paymentmodeBtn = document.getElementById("paymentBtn");
 
 const policyupdate = document.getElementById("shoppolicyBtn");
 
+const updateadminpass = document.getElementById("updateadminpassBtn");
+
+const addproduct = document.getElementById("add-product");
+
 paymentmodeBtn.addEventListener('click', (e)=>{
     e.preventDefault();
     
@@ -51,3 +55,38 @@ policyupdate.addEventListener('click', (e)=>{
           console.error("something went wrong");
       }); 
 });
+
+updateadminpass.addEventListener('click',(e)=>{
+    e.preventDefault();
+    
+    update(ref(db, 'admin/' + id),{
+          password: document.getElementById("admin-password").value
+      })
+      .then(()=>{
+      alert("Admin password updated successfully! Login with the new logins");
+      })
+      .catch((error)=>{
+          console.error("something went wrong");
+      }); 
+});
+
+addproduct.addEventListener('click', (e)=>{
+    e.preventDefault(); 
+      
+      set(ref(db, 'products/' + id),{
+          productname: document.getElementById("product-name").value,
+          productprice: document.getElementById("product-price").value,
+          productdescription: document.getElementById("product-description").value
+      })
+      .then(()=>{
+          document.getElementById("product-name").value = "";
+          document.getElementById("product-description").value = "";
+          document.getElementById("product-price").value = "";
+      alert("Catalog updated successfully!");
+      })
+      .catch((error)=>{
+          console.error("something went wrong");
+      }); 
+});
+
+  

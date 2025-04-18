@@ -53,6 +53,6 @@ function ActivateCrypto(event){
     let cryptobtn = document.getElementById("cryptobtn");
     if(cryptoactivator.disabled === true){
         cryptoactivator.disabled = false;
-        cryptobtn.disabled = false;
+       // cryptobtn.disabled = false;
     }
 }

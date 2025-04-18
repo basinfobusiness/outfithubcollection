@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Benit Apollo Solutions">
-    <title>Signin Template · Bootstrap v5.3</title>
+    <title>ADMIN Signin · OHC v1.3</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/sign-in/">
 
@@ -94,10 +94,13 @@
         display: block !important;
       }
     </style>
-
     
     <!-- Custom styles for this template -->
     <link href="sign-in.css" rel="stylesheet">
+    
+    <!-- Settings -->
+<script type="module" src="signin.js"></script>
+    <noscript> Your browser do not support scripts</noscript>
   </head>
   <body class="d-flex align-items-center py-4 bg-body-tertiary">
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
@@ -158,11 +161,11 @@
     <h1 class="h3 mb-3 fw-normal">Please sign in</h1>
 
     <div class="form-floating">
-      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+      <input type="text" class="form-control username" id="floatingInput" placeholder="name@example.com">
       <label for="floatingInput">Email address</label>
     </div>
     <div class="form-floating">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+      <input type="password" class="form-control password" id="floatingPassword" placeholder="Password">
       <label for="floatingPassword">Password</label>
     </div>
 
@@ -172,11 +175,10 @@
         Remember me
       </label>
     </div>
-    <button class="btn btn-primary w-100 py-2" type="submit">Sign in</button>
+    <button class="btn btn-primary w-100 py-2" type="button" id="signin-btn">Sign in</button>
     <p class="mt-5 mb-3 text-body-secondary">&copy; 2024–2025</p>
   </form>
 </main>
 <script src="https://www.outfithubcollection.com/bootstrap.bundle.min.js"></script>
-
     </body>
 </html>
