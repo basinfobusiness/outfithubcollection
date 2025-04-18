@@ -46,4 +46,13 @@
       }
     }
   })
-})()
+})();
+
+function ActivateCrypto(event){
+    let cryptoactivator = document.getElementById("crypto");
+    let cryptobtn = document.getElementById("cryptobtn");
+    if(cryptoactivator.disabled === true){
+        cryptoactivator.disabled = false;
+        cryptobtn.disabled = false;
+    }
+}

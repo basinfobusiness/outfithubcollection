@@ -100,6 +100,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="dashboard.css" rel="stylesheet">
+    <script type="module" src="app.js"></script>
   </head>
   <body>
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
@@ -266,7 +267,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="#">
+              <a class="nav-link d-flex align-items-center gap-2" href="#integrations" data-bs-toggle="offcanvas">
                 <svg class="bi"><use xlink:href="#puzzle"/></svg>
                 Integrations
               </a>
@@ -473,6 +474,47 @@
       </div>
     </main>
   </div>
+</div>
+<!-- integrations-->
+<div class="offcanvas offcanvas-end" id="integrations">
+        <div class="offcanvas-header">
+            <h3 class="offcanvas-title">Setup Integrations</h3>
+            <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+            <p>Integrations</p>
+            <form>
+               Shopping and Shipping  <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" disabled>
+                </div>              
+                   Activate Cryptocurrency <div class="form-check form-switch">
+                    <input id="cryptobtn" class="form-check-input" type="checkbox" onclick="ActivateCrypto()">
+                </div>
+            </form><hr>
+            <small>Payment Integrations</small>
+            <form>
+                <label for="merchant-name">Merchant</label>
+                <input class="form-control mb-3" type="text" placeholder="merchant name" id="merchant-name">
+                <label for="merchant-number">Merchant Number</label>
+                <input class="form-control mb-3" type="number" placeholder="merchant number" id="merchant-number" maxlength="18" size="20">
+                <select class="form-select mb-3"id="payment-mode">
+                    <option value="Visa">Visa</option>
+                    <option value="PayPal">PayPal</option>
+                    <option value="Mobile Money">Mobile Money</option>
+                    <option value="Cash">Cash</option>
+                    <option id="crypto" disabled>Cryptocurrency</option>
+                    <option selected="selected" disabled>select default payment mode</option>
+                </select>
+                <button class="btn btn-outline-primary" id="paymentBtn" type="button">Add Payment Mode</button>
+            </form>
+            <hr>
+            <small>shopping and shipping </small>
+            <form>
+                <label for="shopping-policy">Shopping Policy</label>
+                <textarea class="form-control mb-3" id="shopping-policy" placeholder="enter shopping policy..."></textarea>
+                <button class="btn btn-outline-warning mb-3" id="shoppolicyBtn">Add Policy</button>
+            </form>
+        </div>
 </div>
 <script src="https://www.outfithubcollection.com/bootstrap.bundle.min.js"></script>
 
