@@ -1,0 +1,38 @@
+// Import the functions you need from the SDKs you need
+  import { initializeApp } from "https:/\/www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
+  import { getDatabase, update, ref, set, get, child, push, onValue, onChildAdded } from "https:/\/www.gstatic.com/firebasejs/11.6.0/firebase-database.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyCwF1CpAK61W1NtPxX2dAUcjp8DhSa_T4Q",
+    authDomain: "outfit-hub-collection.firebaseapp.com",
+    authDomain: "https:/\/outfit-hub-collection-default-rtdb.firebaseio.com/",
+    projectId: "outfit-hub-collection",
+    storageBucket: "outfit-hub-collection.firebasestorage.app",
+    messagingSenderId: "846239063992",
+    appId: "1:846239063992:web:c70f50297c8d19f3bb794d"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
+
+const id = push(child(ref(db), 'records')).key;
+
+const updaterecordsBtn = document.getElementById("updaterecordsBtn");
+
+updaterecordsBtn.addEventListener('click',(e)=>{
+    e.preventDefault();
+    
+    update(ref(db, 'records/' + id),{
+          adminpassword: document.getElementById("admin-password");
+          businessemail: document.getElementById("biz-email").value,
+          businessnumber: document.getElementById("biz-number").value,
+          businessaddress: document.getElementById("biz-address").value
+      })
+      .then(()=>{
+      alert("Record updated successfully!");
+      })
+      .catch((error)=>{
+          console.error("something went wrong");
+      }); 
+});
