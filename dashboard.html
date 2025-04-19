@@ -311,13 +311,13 @@
 
           <ul class="nav flex-column mb-auto">
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="#">
+              <a class="nav-link d-flex align-items-center gap-2" href="#settings" data-bs-toggle="offcanvas">
                 <svg class="bi"><use xlink:href="#gear-wide-connected"/></svg>
                 Settings
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="#">
+              <a class="nav-link d-flex align-items-center gap-2" href="javascript:void(0)" id="logout">
                 <svg class="bi"><use xlink:href="#door-closed"/></svg>
                 Sign out
               </a>
@@ -350,10 +350,10 @@
           <thead>
             <tr>
               <th scope="col">#</th>
-              <th scope="col">Header</th>
-              <th scope="col">Header</th>
+              <th scope="col" ContentEditable="true">Header</th>
+              <th scope="col" ContentEditable="true">Header</th>
               <th scope="col">Address</th>
-              <th scope="col">Header</th>
+              <th scope="col" ContentEditable="true">Header</th>
             </tr>
           </thead>
           <tbody>
@@ -516,7 +516,7 @@
             </form>
         </div>
 </div>
-<!-- Settings -->
+<!-- New Account Settings -->
 <div class="modal fade" id="adminsettings">
     <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
@@ -558,6 +558,20 @@
                 </form>
             </div>
         </div>
+    </div>
+</div>
+<!-- settings -->
+<div class="offcanvas offcanvas-bottom" id="settings">
+    <div class="offcanvas-header">
+        <h3 class="offcanvas-title">Setup Account <span class="badge bg-success">New</span></h3>
+        <button type="button" data-bs-dismiss="offcanvas" class="btn-close"></button>
+    </div>
+    <div class="offcanvas-body">
+        <form>
+            <label>Update Password </label>
+        <input class="form-control mb-3" type="password" placeholder="update password">
+        <button type="button" class="btn btn-primary" id="updatepasswordBtn">Update Password</button>
+        </form>
     </div>
 </div>
 <script src="https://www.outfithubcollection.com/bootstrap.bundle.min.js"></script>
