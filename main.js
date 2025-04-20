@@ -44,7 +44,7 @@ updaterecordsBtn.addEventListener('click',(e)=>{
 editcontentBtn.addEventListener('click',(e)=>{
     e.preventDefault();
     
-    update(ref(db, 'businesssinfo/' + id),{
+    set(ref(db, 'businesssinfo/' + id),{
           aboutus: document.getElementById("about-us").value,
           support: document.getElementById("support").value
       })
