@@ -20,17 +20,34 @@ const id = push(child(ref(db), 'records')).key;
 
 const updaterecordsBtn = document.getElementById("updaterecordsBtn");
 
+const editcontentBtn = document.getElementById("aboutBtn");
+
 updaterecordsBtn.addEventListener('click',(e)=>{
     e.preventDefault();
     
     update(ref(db, 'records/' + id),{
-          adminpassword: document.getElementById("admin-password");
+          adminpassword: document.getElementById("admin-password").value,
           businessemail: document.getElementById("biz-email").value,
           businessnumber: document.getElementById("biz-number").value,
           businessaddress: document.getElementById("biz-address").value
       })
       .then(()=>{
       alert("Record updated successfully!");
+      })
+      .catch((error)=>{
+          console.error("something went wrong");
+      }); 
+});
+
+editcontentBtn.addEventListener('click',(e)=>{
+    e.preventDefault();
+    
+    update(ref(db, 'businesssinfo/' + id),{
+          aboutus: document.getElementById("about-us").value,
+          support: document.getElementById("support").value
+      })
+      .then(()=>{
+      alert("Content updated successfully!");
       })
       .catch((error)=>{
           console.error("something went wrong");

@@ -21,6 +21,8 @@ const db = getDatabase(app);
   
   const bizrecords = ref(db, 'records/');
   
+  const about = ref(db, 'businesssinfo/');
+  
   onChildAdded(newProd, (data) =>{
       
       /* retrieval section */
@@ -73,3 +75,32 @@ let businessdetails = document.getElementById("contact-details");
       console.log("i got loaded!");
       }
   });
+  
+ onChildAdded(about, (data) =>{
+     let bizAbout = "<div" +  "class='col-md-6 col-lg-3'>" +
+            "<h6>" +
+              "ABOUT US" +
+           "</h6>" +
+            "<p>" +
+              data.val().aboutus +
+            "</p>" +
+          "</div>";
+          
+          let bizsupport = "<h6>" +
+              "NEED HELP" +
+            "</h6>" +
+            "<p>" +
+              data.val().support +
+            "</p>";
+          
+          let businessabout = document.getElementById("about-us");
+          
+          let businessupport = document.getElementById("support");
+ businessabout.insertAdjacentHTML('beforebegin',bizAbout);
+      console.log("i got loaded!");
+      }
+      
+      businessupport.insertAdjacentHTML('beforebegin',bizsupport);
+      console.log("i got loaded!");
+      }
+ });
