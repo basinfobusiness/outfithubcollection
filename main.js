@@ -16,8 +16,6 @@
   const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
-const id = push(child(ref(db), 'records')).key;
-
 const updaterecordsBtn = document.getElementById("updaterecordsBtn");
 
 const editcontentBtn = document.getElementById("contentBtn");
@@ -27,7 +25,7 @@ updaterecordsBtn.addEventListener('click',(e)=>{
     e.preventDefault();
     
     document.writeln("loading... please wait...");
-    
+    const id = push(child(ref(db), 'records')).key;
     update(ref(db, 'records/' + id),{
           adminpassword: document.getElementById("admin-password").value,
           businessemail: document.getElementById("biz-email").value,
@@ -40,12 +38,13 @@ updaterecordsBtn.addEventListener('click',(e)=>{
       .catch((error)=>{
           console.error("something went wrong");
       }); 
-});
+},false);
 
 /* content settings */
 editcontentBtn.addEventListener('click',(e)=>{
     e.preventDefault();
     
+    const id = push(child(ref(db), 'businesssinfo')).key;
     set(ref(db, 'businesssinfo/' + id),{
           aboutus: document.getElementById("about-us").value,
           support: document.getElementById("support").value
@@ -56,4 +55,4 @@ editcontentBtn.addEventListener('click',(e)=>{
       .catch((error)=>{
           console.error("something went wrong");
       }); 
-});
+},false);

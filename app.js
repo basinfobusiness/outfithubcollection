@@ -16,8 +16,6 @@
   const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
-const id = push(child(ref(db), 'paymentmode')).key;
-
 const paymentmodeBtn = document.getElementById("paymentBtn");
 
 const policyupdate = document.getElementById("shoppolicyBtn");
@@ -30,6 +28,7 @@ const addproduct = document.getElementById("add-product");
 paymentmodeBtn.addEventListener('click', (e)=>{
     e.preventDefault();
     
+    const id = push(child(ref(db), 'paymentmode')).key;
     update(ref(db, 'paymentmode/' + id),{
           merchantname: document.getElementById("merchant-name").value,
           merchantnumber: document.getElementById("merchant-number").value,
@@ -47,6 +46,7 @@ paymentmodeBtn.addEventListener('click', (e)=>{
 policyupdate.addEventListener('click', (e)=>{
     e.preventDefault();
     
+    const id = push(child(ref(db), 'shipshoppolicy')).key;
     update(ref(db, 'shipshoppolicy/' + id),{
           shipping_policy: document.getElementById("shopping-policy").value
       })
@@ -61,7 +61,8 @@ policyupdate.addEventListener('click', (e)=>{
 /* uodate admin password */
 updateadminpass.addEventListener('click',(e)=>{
     e.preventDefault();
-    
+   
+    const id = push(child(ref(db), 'admin')).key;
     update(ref(db, 'admin/' + id),{
           password: document.getElementById("admin-password").value
       })
@@ -77,6 +78,7 @@ updateadminpass.addEventListener('click',(e)=>{
 addproduct.addEventListener('click', (e)=>{
     e.preventDefault(); 
       
+      const id = push(child(ref(db), 'products')).key;
       set(ref(db, 'products/' + id),{
           productname: document.getElementById("product-name").value,
           productprice: document.getElementById("product-price").value,
