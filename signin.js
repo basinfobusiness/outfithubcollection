@@ -29,7 +29,7 @@ let password = document.querySelector(".password").value;
     
     onChildAdded(adminUser, (data) =>{
        if(data.val().password === password && data.val().username === username){
-           document.write("success");
+           document.write("success... Logging in");
            loadAdminPage();
        }else{
            alert("wrong im");

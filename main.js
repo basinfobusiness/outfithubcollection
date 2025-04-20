@@ -20,8 +20,9 @@ const id = push(child(ref(db), 'records')).key;
 
 const updaterecordsBtn = document.getElementById("updaterecordsBtn");
 
-const editcontentBtn = document.getElementById("aboutBtn");
+const editcontentBtn = document.getElementById("contentBtn");
 
+/* update records */
 updaterecordsBtn.addEventListener('click',(e)=>{
     e.preventDefault();
     
@@ -39,6 +40,7 @@ updaterecordsBtn.addEventListener('click',(e)=>{
       }); 
 });
 
+/* content settings */
 editcontentBtn.addEventListener('click',(e)=>{
     e.preventDefault();
     

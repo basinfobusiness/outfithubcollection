@@ -26,6 +26,7 @@ const updateadminpass = document.getElementById("updateadminpassBtn");
 
 const addproduct = document.getElementById("add-product");
 
+/* payment settings */
 paymentmodeBtn.addEventListener('click', (e)=>{
     e.preventDefault();
     
@@ -42,6 +43,7 @@ paymentmodeBtn.addEventListener('click', (e)=>{
       }); 
 });
 
+/* policy settings */
 policyupdate.addEventListener('click', (e)=>{
     e.preventDefault();
     
@@ -56,6 +58,7 @@ policyupdate.addEventListener('click', (e)=>{
       }); 
 });
 
+/* uodate admin password */
 updateadminpass.addEventListener('click',(e)=>{
     e.preventDefault();
     
@@ -70,6 +73,7 @@ updateadminpass.addEventListener('click',(e)=>{
       }); 
 });
 
+/* Add product */
 addproduct.addEventListener('click', (e)=>{
     e.preventDefault(); 
       
