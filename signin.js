@@ -22,6 +22,8 @@ const signinbtn = document.getElementById("signin-btn");
 signinbtn.addEventListener('click', (e)=>{
     e.preventDefault();
     
+    document.write("loading... please wait...");
+    
     let username = document.querySelector(".username").value;
 let password = document.querySelector(".password").value;
     
@@ -32,7 +34,7 @@ let password = document.querySelector(".password").value;
            document.write("success... Logging in");
            loadAdminPage();
        }else{
-           alert("wrong im");
+           alert("wrong input");
            
        }
        

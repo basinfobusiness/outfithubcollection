@@ -100,8 +100,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="dashboard.css" rel="stylesheet">
-    <script type="module" src="https://www.outfithubcollection.com/app.js"></script>
-    <script type="module" src="https://www.outfithubcollection.com/main.js"></script>
+   <!-- <script type="module" src="https://www.outfithubcollection.com/app.js"></script>
+    <script type="module" src="https://www.outfithubcollection.com/main.js"></script>-->
+    <script type="module" src="main.js"></script>
+    <script type="module" src="app.js"></script>
   </head>
   <body>
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
@@ -503,9 +505,9 @@
                 <input class="form-control mb-3" type="number" placeholder="merchant number" id="merchant-number" maxlength="18" size="20">
                 <select class="form-select mb-3"id="payment-mode">
                     <option value="Visa">Visa</option>
-                    <option value="PayPal">PayPal</option>
                     <option value="Mobile Money">Mobile Money</option>
                     <option value="Cash">Cash</option>
+                    <option value="PayPal" disabled>PayPal</option>
                     <option id="crypto" disabled>Cryptocurrency</option>
                     <option selected="selected" disabled>select default payment mode</option>
                 </select>
@@ -600,10 +602,10 @@
         <button type="button" data-bs-dismiss="offcanvas" class="btn-close"></button>
     </div>
     <div class="offcanvas-body">
+        <small>Account Details</small>
         <form>
-            <label class="text-danger">Update Password </label>
-        <input class="form-control mb-3" type="password" id="admin-password" placeholder="update password"><hr>
-        <small>Account Details</small><br>
+            <label class="text-danger">Change Password</label>
+            <input id="biz-password" class="form-control mb-3" type="password" placeholder="update password"><hr>
         <label>Business Number</label>
         <input id="biz-telephone" class="form-control mb-3" type="tel" placeholder="telephone">
         <label>Email Address</label>
@@ -625,7 +627,7 @@
             <form>
                 <label for="about-us">About Us</label>
             <textarea id="about-us" class="form-control mb-3" placeholder="about us"></textarea>
-            <label for="about-us">Support</label>
+            <label for="support">Support</label>
             <textarea id="support" class="form-control mb-3" id="support" placeholder="Offer support"></textarea>
             <button id="contentBtn" class="btn btn-outline-primary" type="button">Submit</button>
             </form>

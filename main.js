@@ -1,6 +1,6 @@
-// Import the functions you need from the SDKs you need
+ // Import the functions you need from the SDKs you need
   import { initializeApp } from "https:/\/www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
-  import { getDatabase, update, ref, set, get, child, push, onValue, onChildAdded } from "https:/\/www.gstatic.com/firebasejs/11.6.0/firebase-database.js";
+  import { getDatabase, ref, set, update, get, child, push, onValue, onChildAdded } from "https:/\/www.gstatic.com/firebasejs/11.6.0/firebase-database.js";
 
   const firebaseConfig = {
     apiKey: "AIzaSyCwF1CpAK61W1NtPxX2dAUcjp8DhSa_T4Q",
@@ -14,7 +14,7 @@
 
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
-const db = getDatabase(app);
+  const db = getDatabase(app);
 
 const updaterecordsBtn = document.getElementById("updaterecordsBtn");
 
@@ -23,13 +23,11 @@ const editcontentBtn = document.getElementById("contentBtn");
 /* update records */
 updaterecordsBtn.addEventListener('click',(e)=>{
     e.preventDefault();
-    
-    document.writeln("loading... please wait...");
     const id = push(child(ref(db), 'records')).key;
-    update(ref(db, 'records/' + id),{
-          adminpassword: document.getElementById("admin-password").value,
+    
+    set(ref(db, 'records/' + id),{
           businessemail: document.getElementById("biz-email").value,
-          businessnumber: document.getElementById("biz-number").value,
+          businessnumber: document.getElementById("biz-telephone").value,
           businessaddress: document.getElementById("biz-address").value
       })
       .then(()=>{

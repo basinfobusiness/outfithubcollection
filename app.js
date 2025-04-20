@@ -51,6 +51,7 @@ policyupdate.addEventListener('click', (e)=>{
           shipping_policy: document.getElementById("shopping-policy").value
       })
       .then(()=>{
+      document.getElementById("shopping-policy").value = "";
       alert("shipping and shopping policy updated successfully!");
       })
       .catch((error)=>{
