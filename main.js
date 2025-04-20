@@ -26,6 +26,8 @@ const editcontentBtn = document.getElementById("contentBtn");
 updaterecordsBtn.addEventListener('click',(e)=>{
     e.preventDefault();
     
+    document.writeln("loading... please wait...");
+    
     update(ref(db, 'records/' + id),{
           adminpassword: document.getElementById("admin-password").value,
           businessemail: document.getElementById("biz-email").value,

@@ -330,8 +330,11 @@
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h1 class="h2">Dashboard</h1>
-         <!--  notification -->
+         <!--  notification --> 
    <div class="alert alert-warning">Update admin password now. <a class="alert-link" data-bs-toggle="modal" href="#adminsettings">update</a></div>
+   <div class="alert alert-warning">Update Payment. <a class="alert-link" data-bs-toggle="offcanvas" href="#payment-integrations">add merchant</a></div>
+   
+   <div class="alert alert-warning">Update business details. <a class="alert-link" data-bs-toggle="offcanvas" href="#settings">add business details</a></div>
         <div class="btn-toolbar mb-2 mb-md-0">
           <div class="btn-group me-2">
             <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
@@ -591,7 +594,7 @@
     </div>
 </div>
 <!-- settings -->
-<div class="offcanvas offcanvas-bottom" id="settings">
+<div class="offcanvas offcanvas-start" id="settings">
     <div class="offcanvas-header">
         <h3 class="offcanvas-title">Setup Account <span class="badge bg-success">New</span></h3>
         <button type="button" data-bs-dismiss="offcanvas" class="btn-close"></button>
@@ -632,6 +635,6 @@
 </div>
 <script src="https://www.outfithubcollection.com/bootstrap.bundle.min.js"></script>
 
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js" integrity="sha384-eI7PSr3L1XLISH8JdDII5YN/njoSsxfbrkCTnJrzXt+ENP5MOVBxD+l6sEG4zoLp" crossorigin="anonymous"></script><script src="-dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js" integrity="sha384-eI7PSr3L1XLISH8JdDII5YN/njoSsxfbrkCTnJrzXt+ENP5MOVBxD+l6sEG4zoLp" crossorigin="anonymous"></script><script src="dashboard.js"></script>
     </body>
 </html>
