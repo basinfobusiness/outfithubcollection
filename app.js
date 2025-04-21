@@ -1,1 +1,100 @@
-const _0x323e51=_0xcf52;(function(_0x3ed584,_0x41ae99){const _0x34b2cd=_0xcf52,_0x145837=_0x3ed584();while(!![]){try{const _0x47bb11=-parseInt(_0x34b2cd(0xac))/0x1*(-parseInt(_0x34b2cd(0xa2))/0x2)+-parseInt(_0x34b2cd(0x9f))/0x3+parseInt(_0x34b2cd(0xba))/0x4*(parseInt(_0x34b2cd(0xa0))/0x5)+parseInt(_0x34b2cd(0xca))/0x6+parseInt(_0x34b2cd(0xbf))/0x7+-parseInt(_0x34b2cd(0xa9))/0x8*(parseInt(_0x34b2cd(0xc2))/0x9)+-parseInt(_0x34b2cd(0xb7))/0xa;if(_0x47bb11===_0x41ae99)break;else _0x145837['push'](_0x145837['shift']());}catch(_0x27e2e3){_0x145837['push'](_0x145837['shift']());}}}(_0x396c,0xd8e9b));import{initializeApp}from'https://www.gstatic.com/firebasejs/11.6.0/firebase-app.js';import{getDatabase,update,ref,set,get,child,push,onValue,onChildAdded}from'https://www.gstatic.com/firebasejs/11.6.0/firebase-database.js';function _0x396c(){const _0x6e7e10=['something\x20went\x20wrong','outfit-hub-collection','5740518EbrfXi','updateadminpassBtn','936549Cfdunn','1245PInIfM','1:846239063992:web:c70f50297c8d19f3bb794d','4866clMrRa','shoppolicyBtn','product-price','shipping\x20and\x20shopping\x20policy\x20updated\x20successfully!','addEventListener','payment\x20mode\x20added\x20successfully!','merchant-number','8AeBOWM','Admin\x20password\x20updated\x20successfully!\x20Login\x20with\x20the\x20new\x20logins','error','633Ukelqu','merchant-name','product-description','paymentBtn','then','paymentmode','products','paymentmode/','AIzaSyCwF1CpAK61W1NtPxX2dAUcjp8DhSa_T4Q','getElementById','catch','21392610LzELKc','preventDefault','outfit-hub-collection.firebaseapp.com','19268RwMinw','admin/','payment-mode','admin-password','https://outfit-hub-collection-default-rtdb.firebaseio.com/','5125050insNTu','Catalog\x20updated\x20successfully!','key','9796554qYnabZ','admin','click','value','shopping-policy','add-product'];_0x396c=function(){return _0x6e7e10;};return _0x396c();}function _0xcf52(_0xa0acf4,_0x1b9410){const _0x396c9c=_0x396c();return _0xcf52=function(_0xcf5215,_0x3f0304){_0xcf5215=_0xcf5215-0x9e;let _0x328613=_0x396c9c[_0xcf5215];return _0x328613;},_0xcf52(_0xa0acf4,_0x1b9410);}const firebaseConfig={'apiKey':_0x323e51(0xb4),'authDomain':_0x323e51(0xb9),'authDomain':_0x323e51(0xbe),'projectId':_0x323e51(0xc9),'storageBucket':'outfit-hub-collection.firebasestorage.app','messagingSenderId':'846239063992','appId':_0x323e51(0xa1)},app=initializeApp(firebaseConfig),db=getDatabase(app),paymentmodeBtn=document[_0x323e51(0xb5)](_0x323e51(0xaf)),policyupdate=document[_0x323e51(0xb5)](_0x323e51(0xa3)),updateadminpass=document['getElementById'](_0x323e51(0x9e)),addproduct=document['getElementById'](_0x323e51(0xc7));paymentmodeBtn[_0x323e51(0xa6)](_0x323e51(0xc4),_0x50fb61=>{const _0x5b3dd7=_0x323e51;_0x50fb61[_0x5b3dd7(0xb8)]();const _0x544782=push(child(ref(db),_0x5b3dd7(0xb1)))['key'];update(ref(db,_0x5b3dd7(0xb3)+_0x544782),{'merchantname':document[_0x5b3dd7(0xb5)](_0x5b3dd7(0xad))[_0x5b3dd7(0xc5)],'merchantnumber':document[_0x5b3dd7(0xb5)](_0x5b3dd7(0xa8))[_0x5b3dd7(0xc5)],'paymentmode':document[_0x5b3dd7(0xb5)](_0x5b3dd7(0xbc))[_0x5b3dd7(0xc5)],'paypalaccount':document[_0x5b3dd7(0xb5)]('paypal')['value']})[_0x5b3dd7(0xb0)](()=>{const _0x3354e8=_0x5b3dd7;alert(_0x3354e8(0xa7));})['catch'](_0x48dff6=>{const _0x8b9970=_0x5b3dd7;console[_0x8b9970(0xab)](_0x8b9970(0xc8));});}),policyupdate[_0x323e51(0xa6)]('click',_0x5da396=>{const _0x105fd4=_0x323e51;_0x5da396[_0x105fd4(0xb8)]();const _0x45af53=push(child(ref(db),'shipshoppolicy'))[_0x105fd4(0xc1)];update(ref(db,'shipshoppolicy/'+_0x45af53),{'shipping_policy':document[_0x105fd4(0xb5)](_0x105fd4(0xc6))[_0x105fd4(0xc5)]})[_0x105fd4(0xb0)](()=>{const _0x7f7500=_0x105fd4;document['getElementById'](_0x7f7500(0xc6))['value']='',alert(_0x7f7500(0xa5));})['catch'](_0x2f7814=>{const _0x51701d=_0x105fd4;console[_0x51701d(0xab)](_0x51701d(0xc8));});}),updateadminpass[_0x323e51(0xa6)]('click',_0x2a4671=>{const _0x201eca=_0x323e51;_0x2a4671['preventDefault']();const _0x2d08ca=push(child(ref(db),_0x201eca(0xc3)))[_0x201eca(0xc1)];update(ref(db,_0x201eca(0xbb)+_0x2d08ca),{'password':document['getElementById'](_0x201eca(0xbd))[_0x201eca(0xc5)]})['then'](()=>{const _0x42a95c=_0x201eca;alert(_0x42a95c(0xaa));})[_0x201eca(0xb6)](_0x36b76c=>{const _0x1f275c=_0x201eca;console['error'](_0x1f275c(0xc8));});}),addproduct[_0x323e51(0xa6)](_0x323e51(0xc4),_0x5bcee1=>{const _0x2bfa39=_0x323e51;_0x5bcee1[_0x2bfa39(0xb8)]();const _0x4bf18e=push(child(ref(db),_0x2bfa39(0xb2)))[_0x2bfa39(0xc1)];set(ref(db,'products/'+_0x4bf18e),{'productname':document[_0x2bfa39(0xb5)]('product-name')[_0x2bfa39(0xc5)],'productprice':document[_0x2bfa39(0xb5)]('product-price')[_0x2bfa39(0xc5)],'productdescription':document[_0x2bfa39(0xb5)](_0x2bfa39(0xae))[_0x2bfa39(0xc5)]})[_0x2bfa39(0xb0)](()=>{const _0x1c3c9d=_0x2bfa39;document['getElementById']('product-name')[_0x1c3c9d(0xc5)]='',document[_0x1c3c9d(0xb5)](_0x1c3c9d(0xae))[_0x1c3c9d(0xc5)]='',document[_0x1c3c9d(0xb5)](_0x1c3c9d(0xa4))[_0x1c3c9d(0xc5)]='',alert(_0x1c3c9d(0xc0));})['catch'](_0x2575b5=>{const _0x34cbc8=_0x2bfa39;console[_0x34cbc8(0xab)]('something\x20went\x20wrong');});});
+// Import the functions you need from the SDKs you need
+  import { initializeApp } from "https:/\/www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
+  import { getDatabase, update, ref, set, get, child, push, onValue, onChildAdded } from "https:/\/www.gstatic.com/firebasejs/11.6.0/firebase-database.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyCwF1CpAK61W1NtPxX2dAUcjp8DhSa_T4Q",
+    authDomain: "outfit-hub-collection.firebaseapp.com",
+    authDomain: "https:/\/outfit-hub-collection-default-rtdb.firebaseio.com/",
+    projectId: "outfit-hub-collection",
+    storageBucket: "outfit-hub-collection.firebasestorage.app",
+    messagingSenderId: "846239063992",
+    appId: "1:846239063992:web:c70f50297c8d19f3bb794d"
+  };
+
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+const db = getDatabase(app);
+
+const paymentmodeBtn = document.getElementById("paymentBtn");
+
+const policyupdate = document.getElementById("shoppolicyBtn");
+
+const updateadminpass = document.getElementById("updateadminpassBtn");
+
+const addproduct = document.getElementById("add-product");
+
+/* payment settings */
+paymentmodeBtn.addEventListener('click', (e)=>{
+    e.preventDefault();
+    
+    const id = push(child(ref(db), 'paymentmode')).key;
+    update(ref(db, 'paymentmode/' + id),{
+          merchantname: document.getElementById("merchant-name").value,
+          merchantnumber: document.getElementById("merchant-number").value,
+          paymentmode: document.getElementById("payment-mode").value,
+          paypalaccount: document.getElementById("paypal").value
+      })
+      .then(()=>{
+      alert("payment mode added successfully!");
+      })
+      .catch((error)=>{
+          console.error("something went wrong");
+      }); 
+});
+
+/* policy settings */
+policyupdate.addEventListener('click', (e)=>{
+    e.preventDefault();
+    
+    const id = push(child(ref(db), 'shipshoppolicy')).key;
+    update(ref(db, 'shipshoppolicy/' + id),{
+          shipping_policy: document.getElementById("shopping-policy").value
+      })
+      .then(()=>{
+      document.getElementById("shopping-policy").value = "";
+      alert("shipping and shopping policy updated successfully!");
+      })
+      .catch((error)=>{
+          console.error("something went wrong");
+      }); 
+});
+
+/* uodate admin password */
+updateadminpass.addEventListener('click',(e)=>{
+    e.preventDefault();
+   
+    const id = push(child(ref(db), 'admin')).key;
+    update(ref(db, 'admin/' + id),{
+          password: document.getElementById("admin-password").value
+      })
+      .then(()=>{
+      alert("Admin password updated successfully! Login with the new logins");
+      })
+      .catch((error)=>{
+          console.error("something went wrong");
+      }); 
+});
+
+/* Add product */
+addproduct.addEventListener('click', (e)=>{
+    e.preventDefault(); 
+      
+      const id = push(child(ref(db), 'products')).key;
+      set(ref(db, 'products/' + id),{
+          productname: document.getElementById("product-name").value,
+          productprice: document.getElementById("product-price").value,
+          productdescription: document.getElementById("product-description").value
+      })
+      .then(()=>{
+          document.getElementById("product-name").value = "";
+          document.getElementById("product-description").value = "";
+          document.getElementById("product-price").value = "";
+      alert("Catalog updated successfully!");
+      })
+      .catch((error)=>{
+          console.error("something went wrong");
+      }); 
+});
+
+  
