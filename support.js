@@ -18,9 +18,6 @@
   
  const bizsupport = ref(db, 'businesssinfo/');
 
-/* Help */
-/* About us */
-//onChildAdded(bizinfo, (data) =>{
 onChildAdded(bizsupport, (data) =>{
          
  let helpData = "<div class='col-md-6 col-lg-3'>" +
@@ -37,3 +34,4 @@ onChildAdded(bizsupport, (data) =>{
           
       console.log("help and support!");
 });
+
