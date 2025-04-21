@@ -56,3 +56,24 @@ function ActivateCrypto(event){
        // cryptobtn.disabled = false;
     }
 }
+
+function CheckUser(){
+    if(window.document.referrer !== "https:/\/www.outfithubcollection.com/signin.html"){
+    document.writeln("Access Denied.");
+    document.writeln("Not Allowed");
+    window.location.assign("https:/\/www.outfithubcollection.com/signin.html");
+ }
+}
+
+const logout = document.getElementById("logout");
+logout.addEventListener('click',(e)=>{
+    const currentUrl = window.location.href;
+console.log(window.location.href);
+document.writeln("logging off");
+  
+  history.replaceState({}, '', currentUrl);
+  
+   window.location.replace("https:/\/www.outfithubcollection.com/institutelogin.html");
+});
+
+window.onload = CheckUser();
