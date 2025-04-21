@@ -57,12 +57,12 @@ function ActivateCrypto(event){
     }
 }
 
-    if(window.document.referrer !== "https:/\/outfithubcollection.com/signin.html"){
+   /* if(window.document.referrer !== "https:/\/outfithubcollection.com/signin.html"){
     document.writeln("Access Denied.");
     document.writeln("Not Allowed");
    window.location.assign("https:/\/www.outfithubcollection.com/signin.html");
-    //console.log(window.document.referrer);
- }
+    console.log(window.document.referrer);
+ }*/
 
 
 const logout = document.getElementById("logout");
