@@ -35,9 +35,9 @@ let password = document.querySelector(".password").value;
            loadAdminPage();
        }else{
            alert("wrong input");
-           
+           console.log("not found");
        }
        
       });
-    
+    console.log("i got executed");
 },false);

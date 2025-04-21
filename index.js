@@ -1,7 +1,7 @@
 'use strict'
 
 function loadAdminPage(){
-    window.open("https:/\/outfithubcollection.com/dashboard.html","Admin Dashboard",true);
+    window.open("https:/\/www.outfithubcollection.com/dashboard.html","Admin",true);
 }
 
 export { loadAdminPage };
