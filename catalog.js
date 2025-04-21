@@ -14,14 +14,14 @@
 
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
-const db = getDatabase(app);
+  const db = getDatabase(app);
  
  /* retrieved data */
   const newProd = ref(db, 'products/');
   
-  const bizrecords = ref(db, 'records/');
+ const bizrecords = ref(db, 'records/');
   
-  const about = ref(db, 'businesssinfo/');
+  const bizinfo = ref(db, 'businesssinfo/');
   
   onChildAdded(newProd, (data) =>{
       
@@ -49,58 +49,50 @@ const db = getDatabase(app);
            " </a>" +
           "</div>" +
         "</div></div><br>";
+        
       let cataloglog = document.getElementById("catalog-log");
           cataloglog.insertAdjacentHTML('beforebegin',divData);
       console.log("i got loaded!");
       }
   });
   
- onChildAdded(bizrecords, (data) =>{
-    let bizData = "<a href=''>" +
-                "<i class='fa fa-map-marker' aria-hidden='true'></i>" +
-               "<span>" + data.val().bizaddress + "</span>" +
+  onChildAdded(bizrecords, (data) =>{
+   let bizData = "<div class='col-md-6 col-lg-3'><h6>" +
+              "CONTACT US" +
+            "</h6>" +
+           " <div class='info_link-box'><a href=''>" +
+               "<i class='fa " + "fa-map-marker' aria-hidden='true'></i> " +
+            "<span>" + data.val().businessaddress + "</span>" +
+            "</a>" +
+              "<a href=''>" +
+                "<i class='fa" + " fa-phone' aria-hidden='true'></i>" +
+                " <span>" + data.val().businessnumber + "</span>" +
               "</a>" +
               "<a href=''>" +
-                "<i class='fa fa-phone' aria-hidden='true'></i>" +
-                "<span>" + data.val().biznumber + "</span>" +
-              "</a>" +
-              "<a href=''>" +
-                "<i class='fa" + "'fa-envelope' aria-hidden='true'></i>" +
-               "<span>" + data.val().businessaddress + "</span>" +
-              "</a>";
-});
+                "<i class='fa" + " fa-envelope' aria-hidden='true'></i>" +
+               " <span>" + data.val().businessemail + "</span>" +
+              "</a></div></div>";
 
 let businessdetails = document.getElementById("contact-details");
  businessdetails.insertAdjacentHTML('beforebegin',bizData);
       console.log("i got loaded!");
-      }
+      
   });
   
- onChildAdded(about, (data) =>{
-     let bizAbout = "<div" +  "class='col-md-6 col-lg-3'>" +
-            "<h6>" +
-              "ABOUT US" +
-           "</h6>" +
-            "<p>" +
-              data.val().aboutus +
-            "</p>" +
-          "</div>";
-          
-          let bizsupport = "<h6>" +
-              "NEED HELP" +
+  /* About us */
+onChildAdded(bizinfo, (data) =>{
+    let infoData ="<div class='col-md-6 col-lg-3'>" +
+           "<h6>" +
+             "ABOUT US" +
             "</h6>" +
             "<p>" +
-              data.val().support +
-            "</p>";
+              data.val().aboutus +
+           "</p>" +
+          "</div>";
           
           let businessabout = document.getElementById("about-us");
+          businessabout.insertAdjacentHTML('beforebegin',infoData);
           
-          let businessupport = document.getElementById("support");
- businessabout.insertAdjacentHTML('beforebegin',bizAbout);
       console.log("i got loaded!");
-      }
-      
-      businessupport.insertAdjacentHTML('beforebegin',bizsupport);
-      console.log("i got loaded!");
-      }
- });
+});
+

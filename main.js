@@ -1,6 +1,6 @@
  // Import the functions you need from the SDKs you need
   import { initializeApp } from "https:/\/www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
-  import { getDatabase, ref, set, update, get, child, push, onValue, onChildAdded } from "https:/\/www.gstatic.com/firebasejs/11.6.0/firebase-database.js";
+  import { getDatabase, ref, update, get, child, push, onValue, onChildAdded } from "https:/\/www.gstatic.com/firebasejs/11.6.0/firebase-database.js";
 
   const firebaseConfig = {
     apiKey: "AIzaSyCwF1CpAK61W1NtPxX2dAUcjp8DhSa_T4Q",
@@ -23,9 +23,9 @@ const editcontentBtn = document.getElementById("contentBtn");
 /* update records */
 updaterecordsBtn.addEventListener('click',(e)=>{
     e.preventDefault();
-    const id = push(child(ref(db), 'records')).key;
     
-    set(ref(db, 'records/' + id),{
+    const id = push(child(ref(db), 'records')).key;
+    update(ref(db, 'records/' + id),{
           businessemail: document.getElementById("biz-email").value,
           businessnumber: document.getElementById("biz-telephone").value,
           businessaddress: document.getElementById("biz-address").value
@@ -43,7 +43,7 @@ editcontentBtn.addEventListener('click',(e)=>{
     e.preventDefault();
     
     const id = push(child(ref(db), 'businesssinfo')).key;
-    set(ref(db, 'businesssinfo/' + id),{
+    update(ref(db, 'businesssinfo/' + id),{
           aboutus: document.getElementById("about-us").value,
           support: document.getElementById("support").value
       })
