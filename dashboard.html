@@ -100,10 +100,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.min.css" rel="stylesheet">
     <!-- Custom styles for this template -->
     <link href="dashboard.css" rel="stylesheet">
-   <!-- <script type="module" src="https://www.outfithubcollection.com/app.js"></script>
-    <script type="module" src="https://www.outfithubcollection.com/main.js"></script>-->
-    <script type="module" src="main.js"></script>
-    <script type="module" src="app.js"></script>
+   <script type="module" src="https://www.outfithubcollection.com/app.js"></script>
+    <script type="module" src="https://www.outfithubcollection.com/main.js"></script>
   </head>
   <body>
     <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
@@ -333,6 +331,7 @@
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
         <h1 class="h2">Dashboard</h1>
          <!--  notification --> 
+        <!-- <div class="alert alert-primary">View online store. <a class="alert-link"  href="https://www.outfithub.com/store.html" target="_blank">let's go🚀</a></div>-->
    <div class="alert alert-warning">Update admin password now. <a class="alert-link" data-bs-toggle="modal" href="#adminsettings">update</a></div>
    <div class="alert alert-warning">Update Payment. <a class="alert-link" data-bs-toggle="offcanvas" href="#payment-integrations">add merchant</a></div>
    
@@ -511,23 +510,29 @@
                     <input class="form-check-input" type="checkbox" disabled>
                 </div>              
                    Activate Cryptocurrency <div class="form-check form-switch">
-                    <input id="cryptobtn" class="form-check-input" type="checkbox" onclick="ActivateCrypto()">
+                    <input id="cryptobtn" class="form-check-input" type="checkbox" onclick="ActivateCrypto()"></div>
+                    PayPal <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" data-bs-toggle="collapse"
+                    data-bs-target="#paypal">
                 </div>
             </form><hr>
             <small>Payment Integrations</small>
             <form>
                 <label for="merchant-name">Merchant</label>
-                <input class="form-control mb-3" type="text" placeholder="merchant name" id="merchant-name">
+                <input class="form-control mb-3" type="text" placeholder="account name" id="merchant-name">
                 <label for="merchant-number">Merchant Number</label>
-                <input class="form-control mb-3" type="number" placeholder="merchant number" id="merchant-number" maxlength="18" size="20">
+                <input class="form-control mb-3" type="number" placeholder="account number" id="merchant-number" maxlength="18" size="20">
                 <select class="form-select mb-3"id="payment-mode">
                     <option value="Visa">Visa</option>
                     <option value="Mobile Money">Mobile Money</option>
                     <option value="Cash">Cash</option>
-                    <option value="PayPal" disabled>PayPal</option>
                     <option id="crypto" disabled>Cryptocurrency</option>
                     <option selected="selected" disabled>select default payment mode</option>
                 </select>
+                <div class="collapse" id="paypal">
+                    <label>PayPal</label>
+                <input type="text" class="form-control mb-3" placeholder="email address" id="paypal">
+                </div>
                 <button class="btn btn-outline-primary" id="paymentBtn" type="button">Add Payment Mode</button>
             </form>
             <hr>
