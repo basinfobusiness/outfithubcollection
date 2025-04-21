@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
   import { initializeApp } from "https:/\/www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
   import { getDatabase, ref, get, child, push, onValue, onChildAdded } from "https:/\/www.gstatic.com/firebasejs/11.6.0/firebase-database.js";
-  import { loadAdminPage } from "https:/\/www.outfithubcollection.com/index.js";
+ // import { loadAdminPage } from "https:/\/www.outfithubcollection.com/index.js";
 
   const firebaseConfig = {
     apiKey: "AIzaSyCwF1CpAK61W1NtPxX2dAUcjp8DhSa_T4Q",
@@ -27,7 +27,7 @@ signinBtn.addEventListener('click', (e)=>{
    if(user){
        onChildAdded(adminuser, (data) =>{
        if(data.val().username == document.getElementById("floatingInput").value && data.val().password == document.getElementById("floatingPassword").value){       
-         loadAdminPage();
+         window.location.assign("https:/\/www.outfithubcollection.com/dashboard.html");
        }else{
            alert("wrong input");
            console.log("user: " + data.val().username + " password: " + data.val().password);
