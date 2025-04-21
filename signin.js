@@ -17,27 +17,25 @@
   const app = initializeApp(firebaseConfig);
 const db = getDatabase(app);
 
-const signinbtn = document.getElementById("signin-btn");
+const signinBtn = document.getElementById("signin-btn");
 
-signinbtn.addEventListener('click', (e)=>{
+signinBtn.addEventListener('click', (e)=>{
     e.preventDefault();
     
-    document.write("loading... please wait...");
-    
-    let username = document.querySelector(".username").value;
-let password = document.querySelector(".password").value;
-    
-    const adminUser = ref(db, 'admin/');
-    
-    onChildAdded(adminUser, (data) =>{
-       if(data.val().password === password && data.val().username === username){
-           document.write("success... Logging in");
-           loadAdminPage();
+    let user = document.querySelector("#floatingInput").value;
+    const adminuser = ref(db, 'admin/');
+   if(user){
+       onChildAdded(adminuser, (data) =>{
+       if(data.val().username == document.getElementById("floatingInput").value && data.val().password == document.getElementById("floatingPassword").value){       
+         loadAdminPage();
        }else{
            alert("wrong input");
-           console.log("not found");
+           console.log("user: " + data.val().username + " password: " + data.val().password);
        }
-       
-      });
-    console.log("i got executed");
-},false);
+      })
+      console.log("user: " + user);
+   }else{
+       alert(user)
+   }
+    
+});
