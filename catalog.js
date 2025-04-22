@@ -30,7 +30,7 @@
       let divData = "<div class='row'><div class='col-sm-6 col-md-4 col-lg-3'><div class='box'>" +
            "<a href=''>" + 
               "<div class='img-box'>" +
-                "<img src='https:/\/www.outfithubcollection.com/p7.png'' alt=''>" +
+                "<img src='https:/\/www.outfithubcollection.com/image1.png'' alt=''>" +
               "</div>" +
               "<div class='detail-box'>" +
                 "<h6 id='product-name-2'>" +
