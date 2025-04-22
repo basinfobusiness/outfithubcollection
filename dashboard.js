@@ -11,7 +11,7 @@
     data: {
       labels: [
         'Sunday',
-        'Easter Monday',
+        'Monday',
         'Tuesday',
         'Wednesday',
         'Thursday',
@@ -20,7 +20,7 @@
       ],
       datasets: [{
         data: [
-          1,
+          0,
           0,
           0,
           0,
