@@ -1,4 +1,4 @@
- // Import the functions you need from the SDKs you need
+// Import the functions you need from the SDKs you need
   import { initializeApp } from "https:/\/www.gstatic.com/firebasejs/11.6.0/firebase-app.js";
   import { getDatabase, ref, get, child, push, onValue, onChildAdded } from "https:/\/www.gstatic.com/firebasejs/11.6.0/firebase-database.js";
 
@@ -95,4 +95,3 @@ onChildAdded(bizinfo, (data) =>{
           
       console.log("i got loaded!");
 });
-
