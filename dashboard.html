@@ -268,7 +268,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link d-flex align-items-center gap-2" href="#integrations" data-bs-toggle="modal">
+              <a class="nav-link d-flex align-items-center gap-2" href="#integrations" data-bs-toggle="offcanvas">
                 <svg class="bi"><use xlink:href="#puzzle"/></svg>
                 Integrations
               </a>
@@ -341,10 +341,15 @@
             <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
             <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
           </div>
-          <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle d-flex align-items-center gap-1">
+          <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle d-flex align-items-center gap-1" data-bs-toggle="dropdown">
             <svg class="bi"><use xlink:href="#calendar3"/></svg>
             This week
           </button>
+          <ul class="dropdown-menu">
+              <li class="dropdown-item">Last week</li>
+              <li><hr class="dropdown-divider"></li>
+              <li class="dropdown-item">Last month</li>
+          </ul>
         </div>
       </div>
       <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
@@ -645,14 +650,12 @@
     </div>
 </div>
 <!-- Integrations -->
-<div class="modal fade" id="integrations">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3 class="modal-title">Integrations</h3>
-                <button data-bs-dismiss="modal" class="btn-close" type="button"></button>
+<div class="offcanvas offcanvas-bottom" id="integrations">
+            <div class="offcanvas-header">
+                <h3 class="offcanvas-title">Integrations</h3>
+                <button data-bs-dismiss="offcanvas" class="btn-close" type="button"></button>
             </div>
-            <div class="modal-body">
+            <div class="offcanvas-body">
                 <div>
                     <small>Payment Integration</small>
                     <p>Add Payment Integration</p>
@@ -663,12 +666,7 @@
                     <p>Edit Shop Content</p>
                     <button class="btn btn-outline-success" type="button" data-bs-toggle="offcanvas" data-bs-target="#shop-content">Edit Content</button>
                 </div>
-            </div>
-            <div class="modal-footer">
-                <button class="btn btn-danger" data-bs-dismiss="modal" type="button">close</button>
-            </div>
         </div>
-    </div>
 </div>
 <!-- settings -->
 <div class="offcanvas offcanvas-start" id="settings">
