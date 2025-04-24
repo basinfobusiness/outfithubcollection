@@ -28,7 +28,7 @@
       /* retrieval section */
       if(data.val().productname !== ""){
       let divData = "<div class='row'><div class='col-sm-6 col-md-4 col-lg-3'><div class='box'>" +
-           "<a href=''>" + 
+           "<a href='https:/\/www.outfithubcollection.com/app.html'>" + 
               "<div class='img-box'>" +
                 "<img src='https:/\/www.outfithubcollection.com/OHC.png'' alt=''>" +
               "</div>" +
@@ -50,6 +50,9 @@
           "</div>" +
         "</div></div><br>";
         
+        if(typeof(Storage)!== "undefined"){
+            localStorage.productname = data.val().productname;
+        }
       let cataloglog = document.getElementById("catalog-log");
           cataloglog.insertAdjacentHTML('beforebegin',divData);
       console.log("i got loaded!");
@@ -95,3 +98,11 @@ onChildAdded(bizinfo, (data) =>{
           
       console.log("i got loaded!");
 });
+
+(()=>{
+const 
+    const ohc_now = document.createElement("small");
+    const catalogNow = document.getElementById("catalog-log");
+    catalog.addChildElement(ohc_now);
+    ohc_now.textContent = "Outfit Hub Collection Frequency" 
+})();
