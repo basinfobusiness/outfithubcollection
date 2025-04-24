@@ -103,6 +103,7 @@ onChildAdded(bizinfo, (data) =>{
 (()=>{
 'use strict'
     const ohc_now = document.createElement("small");
+    ohc_now.addClassList("text-center");
     const catalogNow = document.getElementById("catalog-log");
     catalogNow.appendChild(ohc_now);
     ohc_now.textContent = "Outfit Hub Collection Frequency";
