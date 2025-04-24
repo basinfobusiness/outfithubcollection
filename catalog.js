@@ -27,7 +27,7 @@
       
       /* retrieval section */
       if(data.val().productname !== ""){
-      let divData = "<div class='row'><div class='col-sm-6 col-md-4 col-lg-3'><div class='box'>" +
+      let divData = "<div class='row'><div class='row'><div class='col-sm-6 col-md-4 col-lg-3'><div class='box'>" +
            "<a href='https:/\/www.outfithubcollection.com/app.html'>" + 
               "<div class='img-box'>" +
                 "<img src='https:/\/www.outfithubcollection.com/OHC.png'' alt=''>" +
@@ -48,7 +48,7 @@
               "</div>" +
            " </a>" +
           "</div>" +
-        "</div></div><br>";
+        "</div></div></div><br>";
         
         if(typeof(Storage)!== "undefined"){
             localStorage.productname = data.val().productname;
