@@ -99,8 +99,9 @@ onChildAdded(bizinfo, (data) =>{
       console.log("i got loaded!");
 });
 
+/* pod */
 (()=>{
-const 
+'use strict'
     const ohc_now = document.createElement("small");
     const catalogNow = document.getElementById("catalog-log");
     catalog.addChildElement(ohc_now);
