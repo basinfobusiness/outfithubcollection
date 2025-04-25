@@ -105,5 +105,6 @@ onChildAdded(bizinfo, (data) =>{
     const ohc_now = document.createElement("small");
     const catalogNow = document.getElementById("catalog-log");
     catalogNow.appendChild(ohc_now);
-    ohc_now.textContent = "<center>"+"Outfit Hub Collection Frequency"+"</center>";
+ //   ohc_now.textContent = "<center>"+"Outfit Hub Collection Frequency"+"</center>";
+ console.log("maintenance")!
 })();
