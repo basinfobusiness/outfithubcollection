@@ -41,7 +41,7 @@ onAuthStateChanged(auth, (user)=>{
             console.error("error is:",error);
         })
     }else{
-        alert("Try logging back in.");
+        alert("Logged Out!");
     }
 });
 
