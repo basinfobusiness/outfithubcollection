@@ -24,8 +24,8 @@ const regstatus = document.getElementById("reg-status");
 signinBtn.addEventListener('click',(event)=>{
     event.preventDefault();
     
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
+    const email = document.getElementById("floatingInput").value;
+    const password = document.getElementById("floatingPassword").value;
     const auth = getAuth();
     
     signInWithEmailAndPassword(auth,email,password)
