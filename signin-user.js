@@ -32,7 +32,10 @@ signinBtn.addEventListener('click',(event)=>{
     .then((userCredential)=>{
        regstatus.textContent = "Successfully logged in!";
        const user = userCredential.user;
-       localStorage.setItem("loggedinUser",user.uid);
+ 
+ if(typeof(Storage)!=="undefined"){
+  localStorage.setItem("loggedinUser",user.uid);
+ }     
        window.location.href = "https:/\/www.outfithubcollection.com/useraccount.html";
     })
     .catch((error)=>{

@@ -38,6 +38,7 @@ onAuthStateChanged(auth, (user)=>{
         })
         .catch((error)=>{
             console.log("error getting document");
+            console.error("error is:",error);
         })
     }else{
         alert("user is not found in localstorage");

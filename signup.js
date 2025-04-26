@@ -24,21 +24,21 @@ const regstatus = document.getElementById("reg-status");
 signup.addEventListener('click',(event)=>{
     event.preventDefault();
     
-    const _fullname = document.getElementById("floatingFullname").value;
-    const _phonenumber = document.getElementById("floatingTelephone").value;
-    const _email = document.getElementById("floatingEmail").value;
-    const _password = document.getElementById("floatingPassword").value;
+    const fullname = document.getElementById("floatingFullname").value;
+    const phonenumber = document.getElementById("floatingTelephone").value;
+    const email = document.getElementById("floatingEmail").value;
+    const password = document.getElementById("floatingPassword").value;
     
     const auth = getAuth();
     const db = getFirestore();
     
-    createUserWithEmailAndPassword(auth, _email, _password)
+    createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential)=>{
         const user = userCredential.user;
         const userData = {
-            fullname: _fullname,
-            telephonenumber: _phonenumber,
-            email: _email
+            fullname: fullname,
+            telephonenumber: phonenumber,
+            email: email
         };
         const docRef = doc(db, "users", user.uid);
         regstatus.textContent = "Account successfully created!";
