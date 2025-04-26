@@ -1,8 +1,8 @@
 // Import the functions you need from the SDKs you need
   import { initializeApp } from "https:/\/www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
   import { getAnalytics } from "https:/\/www.gstatic.com/firebasejs/11.6.1/firebase-analytics.js";
-  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'https:/\/www.gstatic.com/firebasejs/11.6.1/firebase-auth.js';
-  import { getFirestore, setDoc, doc} from 'https:/\/www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js';
+  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https:/\/www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+  import { getFirestore, setDoc, doc } from "https:/\/www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
   
   const firebaseConfig = {
     apiKey: "AIzaSyCPH1vhHu7qyMCqQsogV2epGp34pW-ct-M",
@@ -54,8 +54,12 @@ signup.addEventListener('click',(event)=>{
         const errorCode = error.code;
         if(errorCode === "auth/email-already-in-use"){
             regstatus.textContent = "email already registered!";
-        }else{
+        }else if(errorCode === "auth/weak-password"){
+            regstatus.textContent = "Password too short";
+        }
+        else{
             regstatus.textContent = "unable to create user";
+            console.error("error performing: ", error);
         }
     });
 });
