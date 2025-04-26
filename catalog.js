@@ -5,7 +5,7 @@
   const firebaseConfig = {
     apiKey: "AIzaSyCwF1CpAK61W1NtPxX2dAUcjp8DhSa_T4Q",
     authDomain: "outfit-hub-collection.firebaseapp.com",
-    authDomain: "https:/\/outfit-hub-collection-default-rtdb.firebaseio.com/",
+    //authDomain: "https:/\/outfit-hub-collection-default-rtdb.firebaseio.com/",
     projectId: "outfit-hub-collection",
     storageBucket: "outfit-hub-collection.firebasestorage.app",
     messagingSenderId: "846239063992",
