@@ -30,7 +30,7 @@ onAuthStateChanged(auth, (user)=>{
             if(docSnap.exists()){
                 const userData = docSnap.data();
                 document.getElementById("user-fullname").innerText = userData.fullname;
-            document.getElementById("user-telephone").innerText = userData.telephone; 
+            document.getElementById("user-telephone").innerText = userData.telephonenumber; 
             document.getElementById("user-email").innerText = userData.email;   
             }else{
                 alert("no such data found");

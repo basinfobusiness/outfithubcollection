@@ -30,8 +30,7 @@ signup.addEventListener('click',(event)=>{
     const password = document.getElementById("floatingPassword").value;
     
     const auth = getAuth();
-    const db = getFirestore();
-    
+    const db = getFirestore();   
     createUserWithEmailAndPassword(auth, email, password)
     .then((userCredential)=>{
         const user = userCredential.user;
