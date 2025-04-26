@@ -33,7 +33,7 @@ onAuthStateChanged(auth, (user)=>{
             document.getElementById("user-telephone").innerText = userData.telephonenumber; 
             document.getElementById("user-email").innerText = userData.email;   
             }else{
-                alert("no such data found");
+                alert("no such data found. Try creating an account.");
             }
         })
         .catch((error)=>{
@@ -41,7 +41,7 @@ onAuthStateChanged(auth, (user)=>{
             console.error("error is:",error);
         })
     }else{
-        alert("user is not found in localstorage");
+        alert("Try logging back in.");
     }
 });
 
@@ -53,7 +53,7 @@ event.preventDefault();
     localStorage.removeItem("loggedinUser");
     signOut(auth)
     .then(()=>{
-        window.location.href = "https:/\/www.outfithubcollection.com/logout.html";
+        window.location.href = "https:/\/www.outfithubcollection.com/login.html";
     })
     .catch((error)=>{
         console.error("error signing out.",error);
