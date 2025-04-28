@@ -28,6 +28,7 @@ signup.addEventListener('click',(event)=>{
     const phonenumber = document.getElementById("floatingTelephone").value;
     const email = document.getElementById("floatingEmail").value;
     const password = document.getElementById("floatingPassword").value;
+    const gender = document.getElementById("gender").value;
     
     const auth = getAuth();
     const db = getFirestore();   
@@ -37,7 +38,8 @@ signup.addEventListener('click',(event)=>{
         const userData = {
             fullname: fullname,
             telephonenumber: phonenumber,
-            email: email
+            email: email,
+            gender: gender
         };
         const docRef = doc(db, "users", user.uid);
         regstatus.textContent = "Account successfully created!";
