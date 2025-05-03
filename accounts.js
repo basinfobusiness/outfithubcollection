@@ -37,13 +37,13 @@ onAuthStateChanged(auth, (user)=>{
      //document.getElementById("avatar").src = "https:/\/www.outfithubcollection.com/avatar_male.png";
      let user_avatarNode = document.querySelectorAll(".user-avatar");
      for(let x=0;x<user_avatarNode.length;x++){
-         user_avatarNode.src = "https:/\/www.outfithubcollection.com/avatar_male.png";
+         user_avatarNode[x].src = "https:/\/www.outfithubcollection.com/avatar_male.png";
      }
  }else{
      //document.getElementById("avatar").src = "https:/\/www.outfithubcollection.com/avatar_female.png";
      let user_avatarNode = document.querySelectorAll(".user-avatar");
      for(let x=0;x<user_avatarNode.length;x++){
-         user_avatarNode.src = "https:/\/www.outfithubcollection.com/avatar_female.png";
+         user_avatarNode[x].src = "https:/\/www.outfithubcollection.com/avatar_female.png";
  }         
             }else{
                 alert("no such data found. Try creating an account.");
