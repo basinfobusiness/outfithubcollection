@@ -11,7 +11,7 @@
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <div class="container-fluid">
             <a href="#select-avatar" data-bs-toggle="modal" class="navbar-brand">
-                <img alt="avatar" title="profile picture" id="avatar" class="rounded-pill" style="width:40px">
+                <img alt="avatar" title="profile picture" class="user-avatar rounded-pill" style="width:40px">
             </a>
         <span class="navbar-text">Profile</span> 
         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainmenu">
@@ -25,9 +25,9 @@
                <li class="nav-item">
                    <a class="nav-link active" href="javascript:void(0)">Account</a>
                </li>
-               <!--<li>
-                   <hr class="navbar-divider">
-               </li>-->
+               <li>
+                   <hr class="nav-divider">
+               </li>
                <li class="nav-item">
                    <a id="logoutBtn" class="nav-link" href="javascript:void(0)">Logout</a>
                </li>
@@ -54,13 +54,13 @@
         <div class="modal-dialog modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h3 class="modal-title">Avatar</h3>
+                    <h3 class="modal-title">Select Avatar</h3>
                     <button class="btn-close" type="button" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
                  <div class="row">
                      <div class="col">
-                         <img title="user avatar" alt="avatar">
+                         <img title="user avatar" alt="avatar" id="user-avatar">
                      </div>
                      <div class="col">
                          <img title="user avatar" alt="avatar">
