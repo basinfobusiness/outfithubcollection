@@ -35,13 +35,13 @@ onAuthStateChanged(auth, (user)=>{
  
  if(userData.gender === "Male") {
      //document.getElementById("avatar").src = "https:/\/www.outfithubcollection.com/avatar_male.png";
-     const user_avatarNode = document.querySelectorAll(".user-avatar");
+     let user_avatarNode = document.querySelectorAll(".user-avatar");
      for(let x=0;x<user_avatarNode.length;x++){
          user_avatarNode.src = "https:/\/www.outfithubcollection.com/avatar_male.png";
      }
  }else{
      //document.getElementById("avatar").src = "https:/\/www.outfithubcollection.com/avatar_female.png";
-     const user_avatarNode = document.querySelectorAll(".user-avatar");
+     let user_avatarNode = document.querySelectorAll(".user-avatar");
      for(let x=0;x<user_avatarNode.length;x++){
          user_avatarNode.src = "https:/\/www.outfithubcollection.com/avatar_female.png";
  }         
