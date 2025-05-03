@@ -46,7 +46,7 @@ onAuthStateChanged(auth, (user)=>{
          user_avatarNode[x].src = "https:/\/www.outfithubcollection.com/avatar_female.png";
  }         
             }else{
-                alert("no such data found. Try creating an account.");
+                alert("no data found. Try creating an account.");
             }
         })
         .catch((error)=>{
