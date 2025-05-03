@@ -10,7 +10,7 @@
 <body>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
         <div class="container-fluid">
-            <a href="javascript:void(0)" class="navbar-brand">
+            <a href="#select-avatar" data-bs-toggle="modal" class="navbar-brand">
                 <img alt="avatar" title="profile picture" id="avatar" class="rounded-pill" style="width:40px">
             </a>
         <span class="navbar-text">Profile</span> 
@@ -48,6 +48,29 @@
             <p>Purchases: </p>
             <p>Orders: </p>
             <p>Shipping: </p>
+        </div>
+    </div>
+    <div class="modal fade" id="select-avatar">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Avatar</h3>
+                    <button class="btn-close" type="button" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                 <div class="row">
+                     <div class="col">
+                         <img title="user avatar" alt="avatar">
+                     </div>
+                     <div class="col">
+                         <img title="user avatar" alt="avatar">
+                     </div>
+                 </div>   
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-danger" data-bs-dismiss="modal">close</button>
+                </div>
+            </div>
         </div>
     </div>
 </body>
