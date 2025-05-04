@@ -32,13 +32,12 @@ onAuthStateChanged(auth, (user)=>{
                 document.getElementById("user-fullname").innerText = userData.fullname;
             document.getElementById("user-telephone").innerText = userData.telephonenumber; 
             document.getElementById("user-email").innerText = userData.email; 
- 
- /*if(userData.gender === "Male") {
-     document.getElementById("user-avatar").src = "https:/\/www.outfithubcollection.com/avatar_male.png";
-     
+    if(userData.gender === "Male") {
+     document.getElementById("user-avatar").src = "https:/\/www.outfithubcollection.com/avatar_male.png";   
  }else{
      document.getElementById("user-avatar").src = "https:/\/www.outfithubcollection.com/avatar_female.png";     
-            }*/
+            }
+}
             else{
                 alert("No data found. Try creating an account.");
             }
