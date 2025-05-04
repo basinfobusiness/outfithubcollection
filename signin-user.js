@@ -24,6 +24,7 @@ const regstatus = document.getElementById("reg-status");
 signinBtn.addEventListener('click',(event)=>{
     event.preventDefault();
     
+    regstatus.textContent = "Processing please wait";
     const email = document.getElementById("floatingInput").value;
     const password = document.getElementById("floatingPassword").value;
     const auth = getAuth();
