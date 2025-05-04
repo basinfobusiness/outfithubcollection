@@ -32,6 +32,7 @@ onAuthStateChanged(auth, (user)=>{
                 document.getElementById("user-fullname").innerText = userData.fullname;
             document.getElementById("user-telephone").innerText = userData.telephonenumber; 
             document.getElementById("user-email").innerText = userData.email; 
+    
     if(userData.gender === "Male") {
      document.getElementById("user-avatar").src = "https:/\/www.outfithubcollection.com/avatar_male.png";   
  }else{
@@ -46,7 +47,7 @@ onAuthStateChanged(auth, (user)=>{
             console.log("error getting document");
             console.error("error is:",error);
         });
-    else{
+    }else{
         alert("Logged Out!");
     }
 });
