@@ -35,8 +35,12 @@ onAuthStateChanged(auth, (user)=>{
     
     if(userData.gender === "Male") {
      document.getElementById("user-avatar").src = "https:/\/outfithubcollection.com/avatar_male.png";
+     document.getElementById("selected-avatar").src = "https:/\/outfithubcollection.com/avatar_male.png";
  }else{
      document.getElementById("user-avatar").src = "https:/\/outfithubcollection.com/avatar_female.png";
+     document.getElementById("selected-avatar").src = "https:/\/outfithubcollection.com/avatar_female.png";
+}
+
 }
             else{
                 alert("No data found. Try creating an account.");
