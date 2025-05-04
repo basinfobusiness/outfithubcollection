@@ -32,23 +32,14 @@ onAuthStateChanged(auth, (user)=>{
                 document.getElementById("user-fullname").innerText = userData.fullname;
             document.getElementById("user-telephone").innerText = userData.telephonenumber; 
             document.getElementById("user-email").innerText = userData.email; 
-            
-let user_avatarNode = document.querySelectorAll(".user-avatar");
  
  if(userData.gender === "Male") {
-     document.getElementById("avatar").src = "https:/\/www.outfithubcollection.com/avatar_male.png";
+     document.getElementById("user-avatar").src = "https:/\/www.outfithubcollection.com/avatar_male.png";
      
-    /* for(let x=0;x<user_avatarNode.length;x++){
-         user_avatarNode[x].src = "https:/\/www.outfithubcollection.com/avatar_male.png";
-     }*/
  }else{
-     document.getElementById("avatar").src = "https:/\/www.outfithubcollection.com/avatar_female.png";
- 
-   /*  for(let x=0;x<user_avatarNode.length;x++){
-         user_avatarNode[x].src = "https:/\/www.outfithubcollection.com/avatar_female.png";
- }         */
+     document.getElementById("user-avatar").src = "https:/\/www.outfithubcollection.com/avatar_female.png";     
             }else{
-                alert("no data found. Try creating an account.");
+                alert("No data found. Try creating an account.");
             }
         })
         .catch((error)=>{
