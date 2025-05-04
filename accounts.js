@@ -46,8 +46,8 @@ onAuthStateChanged(auth, (user)=>{
         .catch((error)=>{
             console.log("error getting document");
             console.error("error is:",error);
-        })
-    }else{
+        });
+    else{
         alert("Logged Out!");
     }
 });
