@@ -38,7 +38,8 @@ onAuthStateChanged(auth, (user)=>{
      
  }else{
      document.getElementById("user-avatar").src = "https:/\/www.outfithubcollection.com/avatar_female.png";     
-            }else{
+            }
+            else{
                 alert("No data found. Try creating an account.");
             }
         })
