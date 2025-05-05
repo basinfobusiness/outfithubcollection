@@ -72,13 +72,17 @@ event.preventDefault();
 });
 
 /* avatar management */
+const user_avatar = document.getElementById("useravatar");
 
-function ChangeAvatar(){
-    const userAvatar = document.querySelector("user-avatar");
+user_avatar.addEventListener('click',(event)=>{
+    event.preventDefault();
+    
+    const userAvatar = document.getElementById("user-avatar-second");
     if(userAvatar.value === "user-avatar-second"){
         document.getElementById("user-avatar").src = "https:/\/outfithubcollection.com/avatar_1.png";
     }
     else if(userAvatar.value === "user-avatar-third"){
         document.getElementById("user-avatar").src = "https:/\/outfithubcollection.com/avatar_0.png";
     }
-}
+},true);
+
