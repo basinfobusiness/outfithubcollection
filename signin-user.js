@@ -37,7 +37,7 @@ signinBtn.addEventListener('click',(event)=>{
  if(typeof(Storage)!=="undefined"){
   localStorage.setItem("loggedinUser",user.uid);
  }     
-       window.open("https:/\/www.outfithubcollection.com/useraccount.html","Account",true);
+       window.open("https:/\/www.outfithubcollection.com/useraccount.html","Account",false);
     })
     .catch((error)=>{
     const errorCode = error.code;
