@@ -70,3 +70,15 @@ event.preventDefault();
     })
    
 });
+
+/* avatar management */
+
+function ChangeAvatar(){
+    const userAvatar = document.querySelector("user-avatar");
+    if(userAvatar.value === "user-avatar-second"){
+        document.getElementById("user-avatar").src = "https:/\/outfithubcollection.com/avatar_1.png";
+    }
+    else if(userAvatar.value === "user-avatar-third"){
+        document.getElementById("user-avatar").src = "https:/\/outfithubcollection.com/avatar_0.png";
+    }
+}
