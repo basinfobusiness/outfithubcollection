@@ -8,5 +8,6 @@ shop.addEventListener('click',(e)=>{
 });*/
 
 (()=>{
+    alert("Welcome to Outfit Hub Collection!");
     console.log(navigator.userAgentData?.platform || navigator.platform)
 });
