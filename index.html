@@ -4,8 +4,6 @@
 <head>
   <!-- Basic -->
   <meta charset="utf-8" />
-  <!-- Added .gitignore to the repository -->
-  <!-- Ensure .gitignore is committed and pushed -->
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <!-- Mobile Metas -->
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -16,7 +14,7 @@
   <link rel="shortcut icon" href="https://www.outfithubcollection.com/favicon.png" type="image/x-icon">
 
   <title>
-    Outfit Hub Collection | OHC Store
+    Store | Outfit Hub Collection 
   </title>
 
   <!-- slider stylesheet -->
@@ -34,21 +32,18 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"> 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <!-- <script src="https://outfithubcollection.com/site.js"></script> -->
+  
+  <script src="https://www.outfithubcollection.com/site.js"></script>
 </head>
 
 <body>
-  <script src="site.js"></script>
-
   <div class="hero_area">
     <!-- header section strats -->
     <header class="header_section">
       <nav class="navbar navbar-expand-lg custom_nav-container ">
         <a class="navbar-brand" href="index.html">
-          <span id="user-device">
-             
+          <span>
+            OHC
           </span>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -80,7 +75,7 @@
             </li>
           </ul>
           <div class="user_option">
-            <a href="">
+            <a href="https://www.outfithubcollection.com/login.html">
               <i class="fa fa-user" aria-hidden="true"></i>
               <span>
                 Login
@@ -90,7 +85,7 @@
               <i class="fa fa-shopping-bag" aria-hidden="true"></i>
             </a>
             <form class="form-inline ">
-              <button class="btn nav_search-btn" type="button" data-bs-toggle="modal" data-bs-target="#product-search">
+              <button class="btn nav_search-btn" type="submit">
                 <i class="fa fa-search" aria-hidden="true"></i>
               </button>
             </form>
@@ -212,7 +207,7 @@
       <div class="row">
         <div class="col-sm-6 col-md-4 col-lg-3">
           <div class="box">
-            <a href="">
+            <a href="https://www.outfithubcollection.com/app.html">
               <div class="img-box">
                 <img src="https://www.outfithubcollection.com/ohc_merch.png" alt="">
               </div>
@@ -301,6 +296,8 @@
                     $0
                   </span>
                 </h6>
+                <button class="btn btn-primary" data-bs-toggle="modal"
+                dat-bs-target="#view-product">View</button>
               </div>
               <div class="new">
                 <span>
@@ -770,7 +767,7 @@
         <div class="col-lg-7 col-md-6 px-0">
           <div class="map_container">
             <div class="map-responsive">
-              <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Tabora+Number+3+Accra+Ghana" width="600" height="300" frameborder="0" style="border:0; width: 100%; height:100%" allowfullscreen></iframe>
+              <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Tabora+Number3+Accra+Ghana" width="600" height="300" frameborder="0" style="border:0; width: 100%; height:100%" allowfullscreen></iframe>
             </div>
           </div>
         </div>
@@ -964,32 +961,40 @@
           <a href="https://bit.ly/basonlinegh" target="_blank">Benit Apollo Solutions</a>
         </p>
       </div>
+      <!-- settings-->
+      <!-- connect -->
+     <!-- <div class="">
+         <d 
+      </div>-->
+      <!-- shop -->
+      <div class="modal fade" id="view-product">
+          <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                  <div class="modal-header">
+                    <h3 class="modal-title">Product - <span id="product-name"></span></h3> 
+                    <button class="btn-close" type="button" data-bs-dismiss="modal"></button> 
+                  </div>
+                  <div class="modal-body">
+                     <img src="" id="product-image" alt="" title="">
+                     <p>
+                         Price: <span id="price-tag"></span>
+                         Information: <span id="product-information"></span>
+                         <small class="text-end">Tags: | Time: Date: | PID: <span style="font-variant: small-caps">Net</span></small>
+                     </p>
+                  </div>
+                  <div class="modal-footer">
+                      <button class="btn btn-danger" data-bs-dismiss="modal">close</button>
+                  </div>
+              </div>
+          </div>
+      </div>
     </footer>
     <!-- footer section -->
 
   </section>
 
   <!-- end info section -->
-  <!-- search program -->
-   <div class="modal" id="product-search">
-    <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h3 class="modal-title">Search for product</h3>
-          <button class="btn-close" data-bs-dismiss="modal"></button>
-        </div>
-        <div class="modal-body">
-          <form action="">
-            <input type="text" class="form-control" placeholder="search for product">
-            <button class="btn btn-primary">Search</button>
-          </form>
-        </div>
-        <div class="modal-footer">
-          <button class="btn btn-danger" data-bs-dismiss="modal">Close</button>
-        </div>
-      </div>
-    </div>
-   </div>
+
 
   <script src="https://www.outfithubcollection.com/jquery-3.4.1.min.js"></script>
   <script src="https://www.outfithubcollection.com/bootstrap.js"></script>
