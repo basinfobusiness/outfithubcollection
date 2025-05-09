@@ -1,185 +1,214 @@
-<!DOCTYPE html>
+<!Doctype html>
 <html lang="en">
-<head>
-  <!-- Basic -->
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <!-- Mobile Metas -->
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-  <!-- Site Metas -->
-  <meta name="keywords" content="Fashion, outfits, Easter, Good Friday, Jewellery" />
-  <meta name="description" content="Shop affordable outfits this easter. Let 2025 be the best best eater yet.Gift someone a present this easter." />
-  <meta name="author" content="Benit Apollo Solutions" />
-  <meta http-equiv="expires" content="Tue, 22 Apr 2026 14:25:27 GMT">
-  <link rel="shortcut icon" href="https://www.outfithubcollection.com/favicon.png" type="image/x-icon">
+	<head>
+		<!-- Basic -->
+		  <meta charset="utf-8" />
+		  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		  <!-- Mobile Metas -->
+		  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+		  <!-- Site Metas -->
+		  <meta name="keywords" content="Fashion, outfits, Easter, Good Friday, Jewellery" />
+		  <meta name="description" content="Shop affordable outfits this easter. Let 2025 be the best best eater yet.Gift someone a present this easter." />
+		  <meta name="author" content="Benit Apollo Solutions" />
+		  <meta http-equiv="expires" content="Tue, 22 Apr 2026 14:25:27 GMT">
+		  <meta http-equiv="refresh" content="3600">
+		  <link rel="shortcut icon" href="https://www.outfithubcollection.com/favicon.png" type="image/x-icon">
+		  <title>Outfit Hub Collection | Shop Affordables</title>
+		  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
+		  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+		  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
+		  <link rel="stylesheet" href="site.css">
+	</head>
+	<body style="height: 1000px;">
+		<h2 class="text-center text-uppercase fw-bold">ohc</h2>
+		<nav class="navbar navbar-expand-sm navbar-light sticky-top" style="background: #f9ece6;">
+			<div class="container-fluid">
+				<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainmenu"><span class="navbar-toggler-icon"></span></button>
+				<div class="collapse navbar-collapse" id="mainmenu">
+					<ul class="navbar-nav me-auto">
+						<li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
+						<li class="nav-item"><a class="nav-link active" href="javascript:void(0)">SHOP</a></li>
+						<li class="nav-item"><a class="nav-link" href="why.html">WHY US</a></li>
+						<li class="nav-item"><a class="nav-link" href="testimonial.html">TESTIMONIAL</a></li>
+						<li class="nav-item"><a class="nav-link" href="contact.html">CONTACT US</a></li>
+					</ul>
+					<div class="d-flex">
+						<ul class="navbar-nav me-2">
+							<li class="nav-item"><a class="nav-link" href="https://outfithubcollection.com/login.html" target="_blank"><i class="bi bi-person-fill"></i> LOGIN</a></li>
+							<li class="nav-item"><span><a class="nav-link" href="#cart" data-bs-toggle="offcanvas"><i class="bi bi-bag-fill"></i>&nbsp;<span class="badge bg-success" id="cart-quantity">0</span></a></span></li>
+							<li class="nav-item"><span><a class="nav-link" href="#search-item" data-bs-toggle="modal"> <i class="bi bi-search"></i></span></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<!-- Latest Products -->
+		<div class="container mt-5">
+			<h2 class="text-center text-uppercase">latest products</h2>
+			<div class="row mt-4" id="catalog-log">
+				<!-- <div class="col">
+					<div class="p-3" style="background: #eeeeee;" data-bs-toggle="modal" data-bs-target="#view-product">
+						<br><span class="text-capitalize rounded-circle p-3" style="background: white;">new</span>
+                		<img src="https://www.outfithubcollection.com/ohc_merch.png" class="mt-4 mb-2" alt="" style="width: 200px;height: 200px;">
+                		<p class="mt-3 mb-2 fw-bold">Product Name <span class="float-end">Price <span style="color: #db4f66;">&#x20B5;0</span></span></p>
+					</div>
+					
+				</div>
+				<div class="col">
+					<div class="p-3" style="background: #eeeeee;" data-bs-toggle="modal" data-bs-target="#view-product">
+						<br><span class="text-capitalize rounded-circle p-3" style="background: white;">new</span>
+                		<img src="https://www.outfithubcollection.com/p4.png" class="mt-4 mb-2" alt="" style="width: 200px;height: 200px;">
+                		<p class="mt-3 mb-2 fw-bold"><span id="product-name-1">Product Name</span> <span class="float-end">Price <span style="color: #db4f66;">&#x20B5;0</span></span></p>
+					</div>
+					
+				</div>
+				<div class="col">
+					<div class="p-3" style="background: #eeeeee;" data-bs-toggle="modal" data-bs-target="#view-product">
+						<br><span class="text-capitalize rounded-circle p-3" style="background: white;">new</span>
+                		<img src="https://www.outfithubcollection.com/p5.png" class="mt-4 mb-2" alt="" style="width: 200px;height: 200px;">
+                		<p class="mt-3 mb-2 fw-bold"><span id="product-name-2">Product Name</span> <span class="float-end">Price <span style="color: #db4f66;">&#x20B5;0</span></span></p>
+					</div>
+					
+				</div>
+				<div class="col">
+					<div class="p-3" style="background: #eeeeee;" data-bs-toggle="modal" data-bs-target="#view-product">
+						<br><span class="text-capitalize rounded-circle p-3" style="background: white;">new</span><br>
+                		<img src="https://www.outfithubcollection.com/p6.png" class="d-flex justify-content-center mt-4 mb-2" alt="" style="width: 197px;height: 200px;">
+                		<p class="mt-3 mb-2 fw-bold"><span id="product-name-3">Product Name</span> <span class="float-end">Price <span style="color: #db4f66;">&#x20B5;0</span></span></p>
+					</div>
+					
+				</div>-->
+			</div>
+			<center><button class="btn btn-danger mt-5 text-capitalize">view all products</button></center>
+		</div> 
+      	<!-- <div id="catalog-log"></div> -->
+		<!-- footer -->
+		<div class="container mt-5">
+			<div class="text-bg-dark p-3">
+				<h3 class="text-center"><a href="javascript:void(0)" class="text-white"><i class="bi bi-facebook"></i></a>&nbsp;&nbsp;<a href="javascript:void(0)" class="text-white"><i class="bi bi-twitter"></i></a>&nbsp;&nbsp;<a href="javascript:void(0)" class="text-white"><i class="bi bi-instagram"></i></a>&nbsp;&nbsp;<a href="javascript:void(0)" class="text-white"><i class="bi bi-youtube"></i></a></h3>
+				<div class="row mt-5">
+					<div class="col" id="about-us">
+						<h4 class="text-uppercase fw-bold">About us</h4>
+						<!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet,</p> -->
+					</div>
+					<div class="col">
+						<h4 class="text-uppercase fw-bold">Newsletter</h4>
+						<form action="">
+							<input type="text" class="form-control" placeholder="Enter your email">
+							<button class="btn btn-danger text-uppercase mt-3">subscribe</button>
+						</form>
+					</div>
+					<div class="col" id="help-and-support">
+						<h4 class="text-uppercase fw-bold">Need Help</h4>
+						<!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet, consectetur adipiscing elit, sed doLorem ipsum dolor sit amet,</p> -->
+					</div>
+					<div class="col" id="contact-details">
+						<h4 class="text-uppercase fw-bold">Contact Us</h4>
+						<!-- <a href="" class="text-decoration-none text-white">
+			                <i class="bi bi-geo-alt-fill"></i>
+			                <span> Gb road 123 london Uk </span>
+			            </a><br>
+			            <a href="tel:+233500518387" class="text-decoration-none text-white">
+			                <i class="bi bi-telephone"></i>
+			                <span>+01 12345678901</span>
+			            </a><br>
+			            <a href="mailto:info@outfithubcollection" class="text-decoration-none text-white">
+			                <i class="bi bi-envelope"></i>
+			                <span> info@outfithubcollection.com</span>
+			            </a> -->
+					</div>
+				</div><hr class="mx-auto my-auto mt-3 w-75">
+				<p class="text-center mt-3">
+		          &copy; <span id="displayYear"></span> All Rights Reserved Powered By
+		          <a href="https://bit.ly/basonlinegh" target="_blank" class="text-decoration-none text-white">Benit Apollo Solutions</a>
+        		</p>
+			</div>
+		</div><br>
+		<!-- Search Item -->
+		<div class="modal fade" id="search-item">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title">SEARCH OUTFITHUBCOLLECTION.COM</h4>
+						<button class="btn-close" data-bs-dismiss="modal" type="button"></button>
+					</div>
+					<div class="modal-body">
+						<form action="">
+							<input type="text" class="form-control-plaintext" placeholder="TYPE TO SEARCH.." required>
+							<button class="btn btn-outline-primary" type="button"><i class="bi bi-search"></i></button>
+						</form>
+						<small class="text-capitalize d-flex justify-content-center mt-3 mb-3 text-muted">TRENDING</small>
+						<button class="btn btn-outline-secondary">crop top</button>
+						<button class="btn btn-outline-secondary">tank top</button>
+						<button class="btn btn-outline-secondary">leather top</button>
+						<button class="btn btn-outline-secondary">bottoms</button>
+						<button class="btn btn-outline-secondary">shoes</button>
 
-  <title>Outfit Hub Collection | Shop Affordables</title>
-
-  <!-- slider stylesheet -->
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
-
-  <!-- bootstrap core css -->
-  <link rel="stylesheet" type="text/css" href="https://www.outfithubcollection.com/bootstrap.css" />
-
-  <!-- Custom styles for this template -->
-  <link href="https://www.outfithubcollection.com/style.css" rel="stylesheet" />
-  <!-- responsive style -->
-  <link href="https://www.outfithubcollection.com/responsive.css" rel="stylesheet" />
-  
-   <!-- Design -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" integrity="sha384-tViUnnbYAV00FLIhhi3v/dWt3Jxw4gZQcNoSCxCIFNJVCx7/D55/wXsrNIRANwdD" crossorigin="anonymous">
-</head>
-
-<body>
-  <div class="hero_area">
-    <!-- header section strats -->
-    <header class="header_section">
-      <nav class="navbar navbar-expand-lg custom_nav-container ">
-        <a class="navbar-brand" href="index.html">
-          <span>
-            OHC
-          </span>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class=""></span>
-        </button>
-
-        <div class="collapse navbar-collapse innerpage_navbar" id="navbarSupportedContent">
-          <ul class="navbar-nav  ">
-            <li class="nav-item ">
-              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="shop.html">
-                Shop
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="why.html">
-                Why Us
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="testimonial.html">
-                Testimonial
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact Us</a>
-            </li>
-          </ul>
-          <div class="user_option">
-            <a href="">
-              <i class="fa fa-user" aria-hidden="true"></i>
-              <span>
-                Login
-              </span>
-            </a>
-            <a href="">
-              <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-            </a>
-            <form class="form-inline ">
-              <button class="btn nav_search-btn" type="submit">
-                <i class="fa fa-search" aria-hidden="true"></i>
-              </button>
-            </form>
-          </div>
-        </div>
-      </nav>
-    </header>
-    <!-- end header section -->
-
-  </div>
-  <!-- end hero area -->
-
-  <!-- shop section -->
-
-  <section class="shop_section layout_padding">
-    <div class="container">
-      <div class="heading_container heading_center">
-        <h2>
-          Latest Products
-        </h2>
-      </div>
-      <div id="catalog-log"></div>        
-      <div class="btn-box">
-        <a href="" onclick="alert('setting up')">
-          View All Products
-        </a>
-      </div>
-    </div>
-  </section>
-
-  <!-- end shop section -->
-
-  <!-- info section -->
-
-  <section class="info_section  layout_padding2-top">
-    <div class="social_container">
-      <div class="social_box">
-        <a href="">
-          <i class="bi bi-facebook" aria-hidden="true"></i>
-        </a>
-        <a href="">
-          <i class="bi bi-twitter" aria-hidden="true"></i>
-        </a>
-        <a href="">
-          <i class="bi bi-instagram" aria-hidden="true"></i>
-        </a>
-        <a href="">
-          <i class="bi bi-youtube" aria-hidden="true"></i>
-        </a>
-      </div>
-    </div>
-    <div class="info_container ">
-      <div class="container">
-        <div class="row">
-            <div id="about-us"></div>
-          <div class="col-md-6 col-lg-3">
-            <div class="info_form ">
-              <h5>
-                Newsletter
-              </h5>
-              <form action="#">
-                <input type="email" placeholder="Enter your email">
-                <button>
-                  Subscribe
-                </button>
-              </form>
-            </div>
-          </div>
-          <div id="support"></div>
-          <div id="contact-details"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- footer section -->
-    <footer class=" footer_section">
-      <div class="container">
-        <p>
-          &copy; <span id="displayYear"></span> All Rights Reserved. Powered By
-          <a href="https://bit.ly/basonlinegh" target="_blank">Benit Apollo Solutions</a>
-        </p>
-      </div>
-    </footer>
-    <!-- footer section -->
-
-  </section>
-
-  <!-- end info section -->
-
-
-  <script src="https://www.outfithubcollection.com/jquery-3.4.1.min.js"></script>
-  <script src="https://www.outfithubcollection.com/bootstrap.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
-  </script>
-  <script src="https://www.outfithubcollection.com/custom.js"></script>
-<!--<script type="module" src="https://www.outfithubcollection.com/catalog.js"></script>
-<script type="module" src="https://www.outfithubcollection.com/support.js"></script>-->
-<script type="module" src="catalog.js"></script>
-<script type="module" src="support.js"></script>
-</body>
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-danger" data-bs-dismiss="modal">close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- View Product -->
+		<div class="modal fade" id="view-product">
+			<div class="modal-dialog modal-dialog-centered">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3>Product - <span id="product-name"></span></h3>
+						<button class="btn-close" type="button" data-bs-dismiss="modal"></button>
+					</div>
+					<div class="modal-body">
+						<span class="mb-2">Details</span>
+						<p>Quality: <br>
+							Price: </p>
+						<div class="input-group">
+							<button class="btn btn-light input-text" id="remove-cart-btn">-</button>
+							<input class="form-control" id="quantity" type="number" name="quantity" value="1">
+							<button class="btn btn-light input-text" id="add-cart-btn">+</button>
+						</div>
+						<button class="btn btn-dark mt-3 me-3" id="to-cart-btn" data-bs-toggle="modal" data-bs-target="#cart-added">ADD TO CART</button>
+						<button class="btn btn-light mt-3"><i class="bi bi-bag-heart"></i>&nbsp;ADD TO WISHLIST</button>
+					</div>
+					<div class="modal-footer">
+						<button class="btn btn-danger" data-bs-dismiss="modal">close</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Cart Added -->
+		<div class="modal fade" id="cart-added">
+			<div class="modal-dialog modal-dialog-top">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h3 class="modal-title">Product Added Successfully</h3>
+						<button class="btn-close" data-bs-dismiss="modal"></button>
+					</div>
+					<div class="modal-body">
+						<p>Product added successfully</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Support -->
+		<div class="p-3 rounded-pill" id="tech_support_i" style="background: #DAF7A6;">
+                <p class="text-center" data-bs-toggle="offcanvas" data-bs-target="#tech-support">Need help shopping</p>
+         </div>
+		<div class="p-3 rounded-circle" id="tech_support" style="background: #FFC300;">
+                <h1 class="text-center" data-bs-toggle="offcanvas" data-bs-target="#tech-support"><i class="bi bi-cart4"></i></h1>
+         </div>
+         <!-- Cart -->
+         <div class="offcanvas offcanvas-end" id="cart">
+         	<div class="offcanvas-header">
+         		<h3 class="offcanvas-title">Cart</h3>
+         		<button type="button" class="btn-close" data-bs-toggle="offcanvas"></button>
+         	</div>
+         	<div class="offcanvas-body">
+         		<p>Available Products</p>
+         	</div>
+         </div>
+		<script src="product.js"></script>
+		<script type="module" src="catalog.js"></script>
+	</body>
 </html>
