@@ -11,8 +11,8 @@ body{
 @media only screen and
 (max-width: 600px){
    #tech_support{
-    width:80px; 
-    height:80px; 
+    width:60px; 
+    height:60px; 
     position:fixed; 
     bottom:17px; 
     left:60%;
@@ -24,8 +24,8 @@ body{
 @media only screen and
 (max-width: 600px){
    #tech_support_i{
-    width:200px; 
-    height:70px; 
+    width:150px; 
+    height:50px; 
     position:fixed; 
     bottom:100px; 
     left:61%;
