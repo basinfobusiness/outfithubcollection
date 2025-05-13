@@ -7,6 +7,7 @@ body{
 	text-transform: capitalize;
 }*/
 
+/* phones */
 @media only screen and
 (max-width: 600px){
    #tech_support{
@@ -21,6 +22,20 @@ body{
 }
 
 @media only screen and
+(max-width: 600px){
+   #tech_support_i{
+    width:200px; 
+    height:70px; 
+    position:fixed; 
+    bottom:100px; 
+    left:61%;
+ /*   transform: translateX(-50%);
+    -webkit-animation: mySupport 10s linear 1;*/
+  }
+}
+
+/* Desktop */
+@media only screen and
 (min-width: 1200px){
    #tech_support{
     width:80px; 
@@ -34,22 +49,9 @@ body{
 }
 
 @media only screen and
-(max-width: 600px){
-   #tech_support_i{
-    width:100px; 
-    height:70px; 
-    position:fixed; 
-    bottom:100px; 
-    left:61%;
- /*   transform: translateX(-50%);
-    -webkit-animation: mySupport 10s linear 1;*/
-  }
-}
-
-@media only screen and
 (min-width: 1200px){
    #tech_support_i{
-    width:100px; 
+    width:200px; 
     height:70px; 
     position:fixed; 
     bottom:100px; 
