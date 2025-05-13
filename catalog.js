@@ -27,7 +27,7 @@
       
       /* retrieval section */
       if(data.val().productname !== ""){
-      let divData = "<div class='col'>" + 
+      let divData = "<div class='col-sm mb-5 col-md col-lg-3'>" + 
           "<div class='p-3' style='background: #eeeeee;' data-bs-toggle='modal' data-bs-target='#view-product'>" +
             // "<br>" + "<span class='text-capitalize rounded-circle p-3' style='background: white;'>new</span>" +
             "<center><img src='https://www.outfithubcollection.com/ohc_merch.png' alt='' class='d-block' style='width:80%'></center>" +
@@ -36,8 +36,7 @@
                     data.val().productprice +
                   "</span></span></p>" +
             "</div>" +  
-          "</div>" +
-      "</div>";
+          "</div>";
         
         if(typeof(Storage)!== "undefined"){
             localStorage.productname = data.val().productname;
