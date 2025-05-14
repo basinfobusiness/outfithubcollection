@@ -34,11 +34,10 @@ signinBtn.addEventListener('click',(event)=>{
        regstatus.textContent = "Successfully logged in!";
        const user = userCredential.user;
  
- if(typeof(Storage)!=="undefined"){
-  localStorage.setItem("loggedinUser",user.uid);
- }     
-       window.open("https://www.outfithubcollection.com/useraccount.html","Account",true);
-       Account.status = "User: " + user.fullname;
+        if(typeof(Storage)!=="undefined"){
+          localStorage.setItem("loggedinUser",user.uid);
+        }     
+       window.location.assign("https://www.outfithubcollection.com/useraccount.html");
     })
     .catch((error)=>{
     const errorCode = error.code;
