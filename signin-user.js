@@ -17,7 +17,7 @@
 
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
-  const analytics = getAnalytics(app);
+  // const analytics = getAnalytics(app);
 
 const signinBtn = document.getElementById("signin-btn");
 const regstatus = document.getElementById("reg-status");
@@ -37,7 +37,7 @@ signinBtn.addEventListener('click',(event)=>{
     .then((userCredential)=>{
       regstatus.innerHTML = `<div class='alert alert-secondary' id='reg-status'>${regstatusText[1]}</div>`;
        signinBtn.innerHTML = 'Logged in';
-       userstatus.innerHTML = "<dotlottie-player src='https://lottie.host/9c69e72b-d749-4dc0-a3c9-d3aecc38b27c/nn8P5URRQk.lottie' background='transparent' speed='1' style='width: 300px; height: 200px' loop autoplay></dotlottie-player>";
+       // userstatus.innerHTML = "<dotlottie-player src='https://lottie.host/9c69e72b-d749-4dc0-a3c9-d3aecc38b27c/nn8P5URRQk.lottie' background='transparent' speed='1' style='width: 300px; height: 200px' loop autoplay></dotlottie-player>";
        const user = userCredential.user;
  
         if(typeof(Storage)!=="undefined"){
