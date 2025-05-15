@@ -21,7 +21,7 @@
 
 const signinBtn = document.getElementById("signin-btn");
 const regstatus = document.getElementById("reg-status");
-const regstatusText = ["Account does not exist","Successfully logged in","Processing please wait...","Wrong account details"];
+const regstatusText = ["Account does not exist","Successfully logged in","Processing please wait...","Wrong account details","something went wrong"];
 //const regstatusText = "Processing please wait...";
 signinBtn.addEventListener('click',(event)=>{
     event.preventDefault();
@@ -51,7 +51,7 @@ signinBtn.addEventListener('click',(event)=>{
         // regstatus.textContent = "Wrong account details";
     }else{
         //regstatus.textContent = "Account does not exist";
-        regstatus.innerHTML = `<div class='alert alert-secondary' id='reg-status'>${regstatusText[0]}</div>`;
+        regstatus.innerHTML = `<div class='alert alert-secondary' id='reg-status'>${regstatusText[4]}</div>`;
        signinBtn.innerHTML = "Sign in";
     }
         
