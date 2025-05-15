@@ -41,7 +41,7 @@
     <!-- Account Details -->
     <div class="container container-sm container-md mt-5">
         <div class="card w-100">
-            <img class="card-img-top" id="selected-avatar" >
+            <img class="card-img-top d-block w-75" id="selected-avatar" >
             <div class="card-body">
                 <!-- <p class="lead text-center" style="font-variant:small-caps">Account Details</p> -->
                 <h4 class="card-title">Fullname: <span id="user-fullname"></span></h4>
@@ -112,14 +112,16 @@
     <div class="modal fade" id="logoutstatus">
         <div class="modal-dialog modal-dialog-top">
             <div class="modal-content">
-                <h3 class="modal-title">Success</h3>
-                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-            </div>
-            <div class="modal-body">
-                <p>Logged out successfully</p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn-close" data-bs-dismiss="modal">close</button>
+                <div class="modal-header">
+                   <h3 class="modal-title">Success</h3>
+                   <button type="button" class="btn-close" data-bs-dismiss="modal"></button> 
+                </div>
+                <div class="modal-body">
+                    <p>Logged out successfully</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal">close</button>
+                </div>
             </div>
         </div>
     </div>
