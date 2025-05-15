@@ -20,11 +20,13 @@
 
 const signinBtn = document.getElementById("signin-btn");
 const regstatus = document.getElementById("reg-status");
+const regstatusText = ["Account does not exist","Successfully logged in","Processing please wait...","Wrong account details"];
 
 signinBtn.addEventListener('click',(event)=>{
     event.preventDefault();
     
-    regstatus.textContent = "Processing please wait";
+    signinBtn.innerHTML = "<span class='spinner spinner-'>Processing</span>";
+    regstatus.innerHTML = `<div class='alert alert-secondary' id='reg-status'>${regstatusText[0]}</div>`;
     const email = document.getElementById("floatingInput").value;
     const password = document.getElementById("floatingPassword").value;
     const auth = getAuth();
@@ -32,6 +34,7 @@ signinBtn.addEventListener('click',(event)=>{
     signInWithEmailAndPassword(auth,email,password)
     .then((userCredential)=>{
        regstatus.textContent = "Successfully logged in!";
+       signinBtn.innerHTML = "Logged in";
        const user = userCredential.user;
  
         if(typeof(Storage)!=="undefined"){
