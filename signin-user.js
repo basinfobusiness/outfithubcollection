@@ -25,7 +25,7 @@ const regstatusText = ["Account does not exist","Successfully logged in","Proces
 signinBtn.addEventListener('click',(event)=>{
     event.preventDefault();
     
-    signinBtn.innerHTML = "<span class='spinner spinner-'>Processing</span>";
+    signinBtn.innerHTML = "<span class='spinner-border text-muted'>Processing</span>";
     regstatus.innerHTML = `<div class='alert alert-secondary' id='reg-status'>${regstatusText[0]}</div>`;
     const email = document.getElementById("floatingInput").value;
     const password = document.getElementById("floatingPassword").value;
