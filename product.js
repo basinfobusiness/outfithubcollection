@@ -36,5 +36,6 @@ cartBtn.addEventListener('click',(e)=>{
 	const productquantity = document.getElementById("quantity");
 	const productcart = document.getElementById("cart-quantity");
 	productcart.textContent = productquantity.value;
+	productquantity.value = "1";
 });
 
