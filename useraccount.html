@@ -10,7 +10,7 @@
     <script type="module" src="accounts.js"></script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+    <nav class="navbar bg-dark navbar-dark">
         <div class="container-fluid">
             <a href="#select-avatar" data-bs-toggle="modal" class="navbar-brand">
              <img alt="Avatar Logo" title="profile picture" id="user-avatar" class="rounded-pill" style="width:40px">
@@ -31,7 +31,7 @@
                    <hr class="nav-divider">
                </li>-->
                <li class="nav-item">
-                   <a id="logoutBtn" class="nav-link" href="javascript:void(0)">Logout</a>
+                   <a id="logoutBtn" class="nav-link" href="#logoutstatus" data-bs-toggle="modal">Logout</a>
                </li>
             </ul>
             </div>
@@ -49,10 +49,11 @@
             </div>
         </div>
     </div>
-    <!-- Shopping -->
+    <!-- Shopping Trend -->
     <div class="container container-sm container-md">
        <canvas class="my-4 w-100" id="myChart" width="500" height="180"></canvas>
     </div>
+    <!-- Shopping Details -->
     <div class="container container-sm container-md mt-5 mb-3">
         <div class="text-bg-primary shadow shadow-lg rounded p-3">
             <p>Purchases: </p>
@@ -103,6 +104,21 @@
                 <div class="modal-footer">
                     <button class="btn btn-danger" data-bs-dismiss="modal">close</button>
                 </div>
+            </div>
+        </div>
+    </div>
+    <!-- Logged Out -->
+    <div class="modal fade" id="logoutstatus">
+        <div class="modal-dialog modal-dialog-top">
+            <div class="modal-content">
+                <h3 class="modal-title">Success</h3>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body">
+                <p>Logged out successfully</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn-close" data-bs-dismiss="modal">close</button>
             </div>
         </div>
     </div>
