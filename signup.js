@@ -20,9 +20,12 @@
 
 const signup = document.getElementById("signup-btn");
 const regstatus = document.getElementById("reg-status");
+const regstatusText = ["Email already registered!","Account successfully created!","Processing please wait...","Password too short","Unable to create user"];
 
 signup.addEventListener('click',(event)=>{
     event.preventDefault();
+
+    signup.innerHTML = "<span class='spinner-border text-light'></span>";
     
     const fullname = document.getElementById("floatingFullname").value;
     const phonenumber = document.getElementById("floatingTelephone").value;
@@ -42,10 +45,12 @@ signup.addEventListener('click',(event)=>{
             gender: gender
         };
         const docRef = doc(db, "users", user.uid);
-        regstatus.textContent = "Account successfully created!";
+        signup.innerHTML = "account created";
+        // regstatus.textContent = "Account successfully created!";
+        regstatus.innerHTML = `<div class='alert alert-secondary' id='reg-status'>${regstatusText[1]}</div>`;
         setDoc(docRef,userData)
         .then(()=>{
-            window.location.href = "https:/\/www.outfithubcollection.com/login.html";
+            window.location.href = "https://www.outfithubcollection.com/login.html";
         })
         .catch((error)=>{
             console.error("error writing userdata", error);
@@ -54,14 +59,26 @@ signup.addEventListener('click',(event)=>{
     .catch((error)=>{
         const errorCode = error.code;
         if(errorCode === "auth/email-already-in-use"){
-            regstatus.textContent = "email already registered!";
+            // regstatus.textContent = "email already registered!";
+            regstatus.innerHTML = `<div class='alert alert-secondary' id='reg-status'>${regstatusText[0]}</div>`;
         }else if(errorCode === "auth/weak-password"){
-            regstatus.textContent = "Password too short";
+            // regstatus.textContent = "Password too short";
+            regstatus.innerHTML = `<div class='alert alert-secondary' id='reg-status'>${regstatusText[3]}</div>`;
         }
         else{
-            regstatus.textContent = "unable to create user";
+            // regstatus.textContent = "unable to create user";
+            regstatus.innerHTML = `<div class='alert alert-secondary' id='reg-status'>${regstatusText[4]}</div>`;
             console.error("error performing: ", error);
         }
     });
 });
 
+// check password
+function ShowPassword(){
+    let password = document.getElementById("floatingPassword");
+    if(password.type==="password"){
+        password.type = "text"
+    }else{
+        password.type = "password";
+    }
+}     

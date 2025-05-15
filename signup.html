@@ -161,7 +161,7 @@
 <dotlottie-player src="https://lottie.host/d0280403-d4b9-4602-ab09-d9a9b6995119/MgYkh61NS8.lottie" background="transparent" speed="1" style="width: 300px; height: 250px" loop autoplay></dotlottie-player>
     <h1 class="h3 mt-2 mb-3 fw-normal text-center" style="color:tomato">Sign up</h1>
   <form>
-      <div class="alert alert-secondary" id="reg-status">Get a new OHC account.</div>
+      <div id="reg-status"></div>
       <div class="form-floating">
       <input type="text" class="form-control" id="floatingFullname" placeholder="fullname" required>
       <label for="floatingFullname">Fullname</label>
@@ -204,15 +204,5 @@
   </form>
 </main>
 <script src="https://www.outfithubcollection.com/bootstrap.bundle.min.js"></script>
-<script>
-    function ShowPassword(){
-    let password = document.getElementById("floatingPassword");
-    if(password.type==="password"){
-        password.type = "text"
-    }else{
-        password.type = "password";
-    }
-}            
-</script>
-    </body>
+</body>
 </html>
