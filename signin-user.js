@@ -1,8 +1,8 @@
 // Import the functions you need from the SDKs you need
-  import { initializeApp } from "https:/\/www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
-  import { getAnalytics } from "https:/\/www.gstatic.com/firebasejs/11.6.1/firebase-analytics.js";
-  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https:/\/www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
-  import { getFirestore, setDoc, doc } from "https:/\/www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-analytics.js";
+  import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
+  import { getFirestore, setDoc, doc } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
   
   const firebaseConfig = {
       apiKey: "AIzaSyCPH1vhHu7qyMCqQsogV2epGp34pW-ct-M",
@@ -22,7 +22,7 @@
 const signinBtn = document.getElementById("signin-btn");
 const regstatus = document.getElementById("reg-status");
 const userstatus = document.getElementById('user-status');
-const regstatusText = ["Account does not exist","Successfully logged in","Processing please wait...","Wrong account details","something went wrong"];
+const regstatusText = ["Account does not exist","Successfully logged in","Processing please wait...","Wrong account details","Something went wrong"];
 //const regstatusText = "Processing please wait...";
 signinBtn.addEventListener('click',(event)=>{
     event.preventDefault();
@@ -36,7 +36,7 @@ signinBtn.addEventListener('click',(event)=>{
     signInWithEmailAndPassword(auth,email,password)
     .then((userCredential)=>{
       regstatus.innerHTML = `<div class='alert alert-secondary' id='reg-status'>${regstatusText[1]}</div>`;
-       signinBtn.innerHTML = "Logged in";
+       signinBtn.innerHTML = 'Logged in';
        userstatus.innerHTML = "<dotlottie-player src='https://lottie.host/9c69e72b-d749-4dc0-a3c9-d3aecc38b27c/nn8P5URRQk.lottie' background='transparent' speed='1' style='width: 300px; height: 200px' loop autoplay></dotlottie-player>";
        const user = userCredential.user;
  
@@ -49,12 +49,10 @@ signinBtn.addEventListener('click',(event)=>{
     const errorCode = error.code;
     if(errorCode === "auth/invalid-credential"){
         regstatus.innerHTML = `<div class='alert alert-secondary' id='reg-status'>${regstatusText[3]}</div>`;
-       signinBtn.innerHTML = "Sign in";
-        // regstatus.textContent = "Wrong account details";
+       signinBtn.innerHTML = 'Sign in';
     }else{
-        //regstatus.textContent = "Account does not exist";
         regstatus.innerHTML = `<div class='alert alert-secondary' id='reg-status'>${regstatusText[4]}</div>`;
-       signinBtn.innerHTML = "Sign in";
+       signinBtn.innerHTML = 'Sign in';
     }
         
     });

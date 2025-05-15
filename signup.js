@@ -45,8 +45,7 @@ signup.addEventListener('click',(event)=>{
             gender: gender
         };
         const docRef = doc(db, "users", user.uid);
-        signup.innerHTML = "account created";
-        // regstatus.textContent = "Account successfully created!";
+        signup.innerHTML = "Account created";
         regstatus.innerHTML = `<div class='alert alert-secondary' id='reg-status'>${regstatusText[1]}</div>`;
         setDoc(docRef,userData)
         .then(()=>{
@@ -59,16 +58,15 @@ signup.addEventListener('click',(event)=>{
     .catch((error)=>{
         const errorCode = error.code;
         if(errorCode === "auth/email-already-in-use"){
-            signup.innerHTML = "Create Account";
+            signup.innerHTML = 'Create Account';
             regstatus.innerHTML = `<div class='alert alert-secondary' id='reg-status'>${regstatusText[0]}</div>`;
         }else if(errorCode === "auth/weak-password"){
-            signup.innerHTML = "Create Account";
+            signup.innerHTML = 'Create Account';
             regstatus.innerHTML = `<div class='alert alert-secondary' id='reg-status'>${regstatusText[3]}</div>`;
         }
         else{
-            signup.innerHTML = "Create Account";
+            signup.innerHTML = 'Create Account';
             regstatus.innerHTML = `<div class='alert alert-secondary' id='reg-status'>${regstatusText[4]}</div>`;
-            console.error("error performing: ", error);
         }
     });
 });   
