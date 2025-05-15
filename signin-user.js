@@ -5,8 +5,15 @@
   import { getFirestore, setDoc, doc } from "https:/\/www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
   
   const firebaseConfig = {
-    databaseURL: "https://outfit-hub-collection-34232-default-rtdb.firebaseio.com",
-  };
+      apiKey: "AIzaSyCPH1vhHu7qyMCqQsogV2epGp34pW-ct-M",
+      authDomain: "outfit-hub-collection-34232.firebaseapp.com",
+      databaseURL: "https://outfit-hub-collection-34232-default-rtdb.firebaseio.com",
+      projectId: "outfit-hub-collection-34232",
+      storageBucket: "outfit-hub-collection-34232.firebasestorage.app",
+      messagingSenderId: "1058398717171",
+      appId: "1:1058398717171:web:e11c2433991ff35664a386",
+      measurementId: "G-1QXNMQ4NYZ"
+};
 
   // Initialize Firebase
   const app = initializeApp(firebaseConfig);
