@@ -34,7 +34,7 @@ signinBtn.addEventListener('click',(event)=>{
     
     signInWithEmailAndPassword(auth,email,password)
     .then((userCredential)=>{
-       regstatus.textContent = "Successfully logged in!";
+      regstatus.innerHTML = `<div class='alert alert-secondary' id='reg-status'>${regstatusText[1]}</div>`;
        signinBtn.innerHTML = "Logged in";
        const user = userCredential.user;
  

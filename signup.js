@@ -59,26 +59,16 @@ signup.addEventListener('click',(event)=>{
     .catch((error)=>{
         const errorCode = error.code;
         if(errorCode === "auth/email-already-in-use"){
-            // regstatus.textContent = "email already registered!";
+            signup.innerHTML = "Create Account";
             regstatus.innerHTML = `<div class='alert alert-secondary' id='reg-status'>${regstatusText[0]}</div>`;
         }else if(errorCode === "auth/weak-password"){
-            // regstatus.textContent = "Password too short";
+            signup.innerHTML = "Create Account";
             regstatus.innerHTML = `<div class='alert alert-secondary' id='reg-status'>${regstatusText[3]}</div>`;
         }
         else{
-            // regstatus.textContent = "unable to create user";
+            signup.innerHTML = "Create Account";
             regstatus.innerHTML = `<div class='alert alert-secondary' id='reg-status'>${regstatusText[4]}</div>`;
             console.error("error performing: ", error);
         }
     });
-});
-
-// check password
-function ShowPassword(){
-    let password = document.getElementById("floatingPassword");
-    if(password.type==="password"){
-        password.type = "text"
-    }else{
-        password.type = "password";
-    }
-}     
+});   
