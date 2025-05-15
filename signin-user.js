@@ -21,6 +21,7 @@
 
 const signinBtn = document.getElementById("signin-btn");
 const regstatus = document.getElementById("reg-status");
+const userstatus = document.getElementById('user-status');
 const regstatusText = ["Account does not exist","Successfully logged in","Processing please wait...","Wrong account details","something went wrong"];
 //const regstatusText = "Processing please wait...";
 signinBtn.addEventListener('click',(event)=>{
@@ -36,6 +37,7 @@ signinBtn.addEventListener('click',(event)=>{
     .then((userCredential)=>{
       regstatus.innerHTML = `<div class='alert alert-secondary' id='reg-status'>${regstatusText[1]}</div>`;
        signinBtn.innerHTML = "Logged in";
+       userstatus.innerHTML = "<dotlottie-player src='https://lottie.host/9c69e72b-d749-4dc0-a3c9-d3aecc38b27c/nn8P5URRQk.lottie' background='transparent' speed='1' style='width: 300px; height: 200px' loop autoplay></dotlottie-player>";
        const user = userCredential.user;
  
         if(typeof(Storage)!=="undefined"){
