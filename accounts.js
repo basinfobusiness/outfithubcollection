@@ -34,11 +34,11 @@ onAuthStateChanged(auth, (user)=>{
             document.getElementById("user-email").innerText = userData.email; 
     
     if(userData.gender === "Male") {
-     document.getElementById("user-avatar").src = "https:/\/outfithubcollection.com/avatar_male.png";
-     document.getElementById("selected-avatar").src = "https:/\/outfithubcollection.com/avatar_male.png";
+     document.getElementById("user-avatar").src = "https://outfithubcollection.com/avatar_male.png";
+     document.getElementById("selected-avatar").src = "https://outfithubcollection.com/avatar_male.png";
  }else{
-     document.getElementById("user-avatar").src = "https:/\/outfithubcollection.com/avatar_female.png";
-     document.getElementById("selected-avatar").src = "https:/\/outfithubcollection.com/avatar_female.png";
+     document.getElementById("user-avatar").src = "https://outfithubcollection.com/avatar_female.png";
+     document.getElementById("selected-avatar").src = "https://outfithubcollection.com/avatar_female.png";
 }
 
 }
@@ -51,7 +51,7 @@ onAuthStateChanged(auth, (user)=>{
             console.error("error is:",error);
         });
     }else{
-        alert("Logged Out!");
+        document.writeln("Logged Out!");
     }
 });
 
@@ -63,7 +63,7 @@ event.preventDefault();
     localStorage.removeItem("loggedinUser");
     signOut(auth)
     .then(()=>{
-        window.location.href = "https:/\/www.outfithubcollection.com/login.html";
+        window.location.href = "https://www.outfithubcollection.com/login.html";
     })
     .catch((error)=>{
         console.error("error signing out.",error);
@@ -79,10 +79,10 @@ user_avatar.addEventListener('click',(event)=>{
     
     const userAvatar = document.getElementById("user-avatar-second");
     if(userAvatar.value === "user-avatar-second"){
-        document.getElementById("user-avatar").src = "https:/\/outfithubcollection.com/avatar_1.png";
+        document.getElementById("user-avatar").src = "https://outfithubcollection.com/avatar_1.png";
     }
     else if(userAvatar.value === "user-avatar-third"){
-        document.getElementById("user-avatar").src = "https:/\/outfithubcollection.com/avatar_0.png";
+        document.getElementById("user-avatar").src = "https://outfithubcollection.com/avatar_0.png";
     }
 },true);
 
