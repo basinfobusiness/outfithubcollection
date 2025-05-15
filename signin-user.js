@@ -26,7 +26,7 @@ const regstatusText = ["Account does not exist","Successfully logged in","Proces
 signinBtn.addEventListener('click',(event)=>{
     event.preventDefault();
     
-    signinBtn.innerHTML = "<span class='spinner-border text-muted'></span><span></span>";
+    signinBtn.innerHTML = "<span class='spinner-border text-light'></span>";
     regstatus.innerHTML = `<div class='alert alert-secondary' id='reg-status'>${regstatusText[2]}</div>`;
     const email = document.getElementById("floatingInput").value;
     const password = document.getElementById("floatingPassword").value;
@@ -47,10 +47,12 @@ signinBtn.addEventListener('click',(event)=>{
     const errorCode = error.code;
     if(errorCode === "auth/invalid-credential"){
         regstatus.innerHTML = `<div class='alert alert-secondary' id='reg-status'>${regstatusText[3]}</div>`;
+       signinBtn.innerHTML = "Sign in";
         // regstatus.textContent = "Wrong account details";
     }else{
         //regstatus.textContent = "Account does not exist";
         regstatus.innerHTML = `<div class='alert alert-secondary' id='reg-status'>${regstatusText[0]}</div>`;
+       signinBtn.innerHTML = "Sign in";
     }
         
     });
