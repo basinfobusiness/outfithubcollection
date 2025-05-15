@@ -30,28 +30,29 @@ onAuthStateChanged(auth, (user)=>{
             if(docSnap.exists()){
                 const userData = docSnap.data();
                 document.getElementById("user-fullname").innerText = userData.fullname;
-            document.getElementById("user-telephone").innerText = userData.telephonenumber; 
-            document.getElementById("user-email").innerText = userData.email; 
+                document.getElementById("user-telephone").innerText = userData.telephonenumber; 
+                document.getElementById("user-email").innerText = userData.email; 
     
-    if(userData.gender === "Male") {
-     document.getElementById("user-avatar").src = "https://outfithubcollection.com/avatar_male.png";
-     document.getElementById("selected-avatar").src = "https://outfithubcollection.com/avatar_male.png";
- }else{
-     document.getElementById("user-avatar").src = "https://outfithubcollection.com/avatar_female.png";
-     document.getElementById("selected-avatar").src = "https://outfithubcollection.com/avatar_female.png";
-}
+                if(userData.gender === "Male") {
+                 document.getElementById("user-avatar").src = "https://outfithubcollection.com/avatar_male.png";
+                 document.getElementById("selected-avatar").src = "https://outfithubcollection.com/avatar_male.png";
+                }else{
+                     document.getElementById("user-avatar").src = "https://outfithubcollection.com/avatar_female.png";
+                     document.getElementById("selected-avatar").src = "https://outfithubcollection.com/avatar_female.png";
+                }
 
-}
-            else{
-                alert("No data found. Try creating an account.");
+            }else{
+                document.writeln("No data found. Try creating an account.");
+                window.reload();
             }
         })
         .catch((error)=>{
-            console.log("error getting document");
-            console.error("error is:",error);
+            document.writeln("error getting document");
+            window.reload();
         });
     }else{
         document.writeln("Logged Out!");
+        window.location.assign('https://www.outfithubcollection.com/login.html');
     }
 });
 
@@ -66,7 +67,7 @@ event.preventDefault();
         window.location.href = "https://www.outfithubcollection.com/login.html";
     })
     .catch((error)=>{
-        console.error("error signing out.",error);
+        document.writeln("error signing out.");
     })
    
 });
