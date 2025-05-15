@@ -2,6 +2,57 @@
  
 const searchInput = document.getElementById('search-input');
 const searchList = document.getElementById('search-list');
+const croptop = document.getElementById('product-ct');
+const tanktop = document.getElementById('product-tp');
+const leathertop = document.getElementById('product-ld');
+const bottoms = document.getElementById('product-bt');
+const shoes = document.getElementById('product-sh');
+
+
+croptop.addEventListener('click',function(event) {
+  event.preventDefault();
+
+  document.writeln('searching catalog');
+
+  sessionStorage.setItem('searchpara',croptop.innerText);
+  window.location.assign('searchresult.html');
+});
+
+tanktop.addEventListener('click',function(event) {
+  event.preventDefault();
+
+  document.writeln('searching catalog');
+
+  sessionStorage.setItem('searchpara',tanktop.innerText);
+  window.location.assign('searchresult.html');
+});
+
+leathertop.addEventListener('click',function(event) {
+  event.preventDefault();
+
+  document.writeln('searching catalog');
+
+  sessionStorage.setItem('searchpara',leathertop.innerText);
+  window.location.assign('searchresult.html');
+});
+
+bottoms.addEventListener('click',function(event) {
+  event.preventDefault();
+
+  document.writeln('searching catalog');
+
+  sessionStorage.setItem('searchpara',bottoms.innerText);
+  window.location.assign('searchresult.html');
+});
+
+shoes.addEventListener('click',function(event) {
+  event.preventDefault();
+
+  document.writeln('searching catalog');
+
+  sessionStorage.setItem('searchpara',shoes.innerText);
+  window.location.assign('searchresult.html');
+});
 
 searchInput.addEventListener('input', () => {
   const searchTerm = searchInput.value.toLowerCase();
