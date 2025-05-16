@@ -78,6 +78,7 @@ addproduct.addEventListener('click', (e)=>{
       set(ref(db, 'products/' + id),{
           productname: document.getElementById("product-name").value,
           productprice: document.getElementById("product-price").value,
+          productquantity: document.getElementById("product-quantity").value,
           productdescription: document.getElementById("product-description").value
       })
       .then(()=>{

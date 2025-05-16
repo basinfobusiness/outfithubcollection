@@ -332,8 +332,8 @@
         <h1 class="h2">Dashboard</h1>
          <!--  notification --> 
         <div class="alert alert-primary">View online store. <a class="alert-link"  href="https://www.outfithubcollection.com/shop.html" target="_blank">let's go🚀</a></div>
-   <div class="alert alert-warning">Products go live. <a class="alert-link" data-bs-toggle="modal" href="#products">Add Product</a></div>
-   <!--<div class="alert alert-warning">Update Payment. <a class="alert-link" data-bs-toggle="offcanvas" href="#payment-integrations">add merchant</a></div>
+   <!--<div class="alert alert-warning">Update admin password now. <a class="alert-link" data-bs-toggle="modal" href="#adminsettings">update</a></div>
+   <div class="alert alert-warning">Update Payment. <a class="alert-link" data-bs-toggle="offcanvas" href="#payment-integrations">add merchant</a></div>
    
    <div class="alert alert-warning">Update business details. <a class="alert-link" data-bs-toggle="offcanvas" href="#settings">add business details</a></div>-->
         <div class="btn-toolbar mb-2 mb-md-0">
@@ -683,14 +683,16 @@
             </div>
             <div class="modal-body">
                 <form>
-                    <label>Product Name:</label>
-                    <input class="form-control mb-3" type="text" placeholder="product name" id="product-name">
-                    <label>Product Price:</label>
-                    <input class="form-control mb-3" type="number" placeholder="price ¢" id="product-price">
+                    <label for="product-name">Product Name:</label>
+                    <input class="form-control mb-3" type="text" placeholder="Product Name" id="product-name">
+                    <label for="product-price">Product Price:</label>
+                    <input class="form-control mb-3" type="number" placeholder="Price ¢" id="product-price">
+                    <label for="product-quantity">Quantity in stock:</label>
+                    <input class="form-control mb-3" type="number" placeholder="Quantity" id="product-quantity">
                   <label>Product Description: </label> 
-                  <textarea class="form-control mb-3" placeholder="product description" id="product-description"></textarea>
-                <label>Brands: </label> 
-                  <textarea class="form-control mb-3" placeholder="brand description" id="product-description" disabled></textarea> 
+                  <textarea class="form-control mb-3" placeholder="Product Description" id="product-description"></textarea>
+                <label for="brand-description">Brands: </label> 
+                  <textarea class="form-control mb-3" placeholder="Brand Details" id="brand-description" disabled></textarea> 
                   
                   <button type="button" class="btn btn-outline-primary" id="add-product">Add Product </button>
                 </form>
@@ -754,12 +756,11 @@
             <button id="contentBtn" class="btn btn-outline-primary" type="button">Submit</button>
             </form>
         </div>
-        <d
+        </div>
     </div>
 </div>
 <script src="https://www.outfithubcollection.com/bootstrap.bundle.min.js"></script>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js" integrity="sha384-eI7PSr3L1XLISH8JdDII5YN/njoSsxfbrkCTnJrzXt+ENP5MOVBxD+l6sEG4zoLp" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js" integrity="sha384-eI7PSr3L1XLISH8JdDII5YN/njoSsxfbrkCTnJrzXt+ENP5MOVBxD+l6sEG4zoLp" crossorigin="anonymous"></script>
  <script src="dashboard.js"></script>
-    </body>
+</body>
 </html>
