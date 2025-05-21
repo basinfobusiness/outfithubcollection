@@ -325,28 +325,39 @@
     </div>
     <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
       <div class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
-        <h1 class="h2">Dashboard</h1>
+        <h1 class="h2 me-2">Dashboard</h1>
          <!--  notification --> 
-        <div class="alert alert-primary">View online store. <a class="alert-link"  href="https://www.outfithubcollection.com/shop.html" target="_blank">let's go🚀</a></div>
-   <div class="alert alert-warning">Add Shop Catalog. <a class="alert-link" data-bs-toggle="modal" href="#products">add product</a></div>
-   <!-- <div class="alert alert-warning">Update Payment. <a class="alert-link" data-bs-toggle="offcanvas" href="#payment-integrations">add merchant</a></div>
+         <div class="row">
+            <div class="col">
+              <div class="alert alert-primary">View online store. <a class="alert-link"  href="https://www.outfithubcollection.com/shop.html" target="_blank">let's go🚀</a></div>
+            </div>
+            <div class="col">
+              <div class="alert alert-warning">Add Shop Catalog. <a class="alert-link" data-bs-toggle="modal" href="#products">add product</a></div>
+            </div>
+            <div class="col">
+               <div class="alert alert-warning">What's new?. <a class="alert-link" data-bs-toggle="modal" href="#getting-started">Watch getting started video</a></div>
+            </div>
+            <div class="col">
+              <div class="btn-toolbar mb-2 mb-md-0">
+                <div class="btn-group me-2">
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
+                  <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
+                </div>
+                <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle d-flex align-items-center gap-1" data-bs-toggle="dropdown">
+                  <svg class="bi"><use xlink:href="#calendar3"/></svg>
+                  This week
+                </button>
+                <ul class="dropdown-menu">
+                    <li class="dropdown-item">Last week</li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li class="dropdown-item">Last month</li>
+                </ul>
+              </div>
+            </div>
+         </div>
    
-   <div class="alert alert-warning">Update business details. <a class="alert-link" data-bs-toggle="offcanvas" href="#settings">add business details</a></div> -->
-        <div class="btn-toolbar mb-2 mb-md-0">
-          <div class="btn-group me-2">
-            <button type="button" class="btn btn-sm btn-outline-secondary">Share</button>
-            <button type="button" class="btn btn-sm btn-outline-secondary">Export</button>
-          </div>
-          <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle d-flex align-items-center gap-1" data-bs-toggle="dropdown">
-            <svg class="bi"><use xlink:href="#calendar3"/></svg>
-            This week
-          </button>
-          <ul class="dropdown-menu">
-              <li class="dropdown-item">Last week</li>
-              <li><hr class="dropdown-divider"></li>
-              <li class="dropdown-item">Last month</li>
-          </ul>
-        </div>
+   <!-- <div class="alert alert-warning">Update business details. <a class="alert-link" data-bs-toggle="offcanvas" href="#settings">add business details</a></div> -->
+        
       </div>
       <canvas class="my-4 w-100" id="myChart" width="900" height="380"></canvas>
 
@@ -356,8 +367,8 @@
           <thead>
             <tr>
               <th scope="col" ContentEditable="true">#</th>
-              <th scope="col" ContentEditable="true">Name</th>
-              <th scope="col" ContentEditable="true">Contact Number</th>
+              <th scope="col">Name</th>
+              <th scope="col">Contact Number</th>
               <th scope="col">Email Address</th>
               <th scope="col">Address</th>
               <th scope="col">Status</th>
@@ -604,7 +615,7 @@
 <div class="offcanvas offcanvas-end" id="payment-integrations">
         <div class="offcanvas-header">
             <h3 class="offcanvas-title">Setup Integrations</h3>
-            <button class="btn-close" data-bs-dismiss="offcanvas"></button>
+            <button class="btn-close" data-bs-dismiss="offcanvas" title="close modal"></button>
         </div>
         <div class="offcanvas-body">
             <p>Integrations</p>
@@ -695,7 +706,7 @@
                 <label for="brand-description">Brands: </label> 
                   <textarea class="form-control mb-3" placeholder="Brand Details" id="brand-description" disabled></textarea> 
                   
-                  <button type="button" class="btn btn-outline-primary" id="add-product">Add Product </button>
+                  <button type="button" class="btn btn-outline-primary" id="add-product" title="Add Product">Add Product </button>
                 </form>
             </div>
         </div>
@@ -760,7 +771,24 @@
         </div>
     </div>
 </div>
-<script src="https://www.outfithubcollection.com/bootstrap.bundle.min.js"></script>
+<!-- Getting Started -->
+<div class="modal fade" id="getting-started">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Getting Started</h3>
+        <button class="btn-close" type="button" id="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <p>Processing...please wait</p>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-danger" data-bs-dismiss="modal">close</button>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://outfithubcollection.com/bootstrap.bundle.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.3.2/dist/chart.umd.js" integrity="sha384-eI7PSr3L1XLISH8JdDII5YN/njoSsxfbrkCTnJrzXt+ENP5MOVBxD+l6sEG4zoLp" crossorigin="anonymous"></script>
  <script src="dashboard.js"></script>
 </body>

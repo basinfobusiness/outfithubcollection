@@ -3,13 +3,7 @@
   import { getDatabase, ref, update, get, child, push, onValue, onChildAdded } from "https:/\/www.gstatic.com/firebasejs/11.6.0/firebase-database.js";
 
   const firebaseConfig = {
-    apiKey: "AIzaSyCwF1CpAK61W1NtPxX2dAUcjp8DhSa_T4Q",
-    authDomain: "outfit-hub-collection.firebaseapp.com",
-    authDomain: "https:/\/outfit-hub-collection-default-rtdb.firebaseio.com/",
-    projectId: "outfit-hub-collection",
-    storageBucket: "outfit-hub-collection.firebasestorage.app",
-    messagingSenderId: "846239063992",
-    appId: "1:846239063992:web:c70f50297c8d19f3bb794d"
+    databaseURL: "https://outfit-hub-collection-34232-default-rtdb.firebaseio.com"
   };
 
   // Initialize Firebase

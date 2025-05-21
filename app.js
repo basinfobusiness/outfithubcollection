@@ -83,8 +83,9 @@ addproduct.addEventListener('click', (e)=>{
       })
       .then(()=>{
           document.getElementById("product-name").value = "";
-          document.getElementById("product-description").value = "";
           document.getElementById("product-price").value = "";
+          document.getElementById("product-quantity").value = "";
+          document.getElementById("product-description").value = "";
       alert("Catalog updated successfully!");
       })
       .catch((error)=>{
