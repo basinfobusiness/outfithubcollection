@@ -6,7 +6,7 @@
   const firebaseConfig = {
     apiKey: "AIzaSyCwF1CpAK61W1NtPxX2dAUcjp8DhSa_T4Q",
     authDomain: "outfit-hub-collection.firebaseapp.com",
-    authDomain: "https:/\/outfit-hub-collection-default-rtdb.firebaseio.com/",
+    databaseURL: "https://outfit-hub-collection-default-rtdb.firebaseio.com/",
     projectId: "outfit-hub-collection",
     storageBucket: "outfit-hub-collection.firebasestorage.app",
     messagingSenderId: "846239063992",
@@ -23,15 +23,17 @@ signinBtn.addEventListener('click', (e)=>{
     e.preventDefault();
     
     let user = document.querySelector("#floatingInput").value;
+    signinBtn.innerHTML = "<span class='spinner-border text-light'></span>";
     const adminuser = ref(db, 'admin/');
    if(user){
        onChildAdded(adminuser, (data) =>{
        if(data.val().email === document.getElementById("floatingInput").value && data.val().password === document.getElementById("floatingPassword").value){       
-         window.location.assign("https:/\/www.outfithubcollection.com/dashboard.html");
+         window.location.assign("https://outfithubcollection.com/dashboard.html");
        }else{
            alert("wrong input");
+           signinBtn.innerHTML = "Sign in";
            console.error("bad response ");
-           console.log("user: " + data.val().username + " password: " + data.val().password);
+           //console.log("user: " + data.val().username + " password: " + data.val().password);
        }
       })
       console.log("user: " + user);

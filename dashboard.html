@@ -706,11 +706,28 @@
                 <label for="brand-description">Brands: </label> 
                   <textarea class="form-control mb-3" placeholder="Brand Details" id="brand-description" disabled></textarea> 
                   
-                  <button type="button" class="btn btn-outline-primary" id="add-product" title="Add Product">Add Product </button>
+                  <button type="button" class="btn btn-outline-primary" id="add-product" title="Add Product" data-bs-toggle="modal" data-bs-target="#catalog-added">Add Product </button>
                 </form>
             </div>
         </div>
     </div>
+</div>
+<!-- evenat -->
+<div class="modal fade" id="catalog-added">
+  <div class="modal-dialog modal-dialog-top">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title">Product Added</h3>
+        <button class="btn-close" id="btn-close" data-bs-dismiss="modal" type="button"></button>
+      </div>
+      <div class="modal-body">
+        Catalog Added
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-danger" data-bs-dismiss="modal" type="button" id="close-btn">closre</button>
+      </div>
+    </div>
+  </div>
 </div>
 <!-- Integrations -->
 <div class="offcanvas offcanvas-bottom" id="integrations">
