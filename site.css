@@ -1,6 +1,31 @@
 body{
 	user-select: none;
-/*   height: 3500px;*/
+/*	background-color: #f8f9fa; */
+   background-color: #fff;
+   font-family: 'Didot', serif;
+}
+
+.my-soul-regular {
+  font-family: "My Soul", cursive;
+  font-weight: 400;
+  font-style: normal;
+  text-transform: capitalize;
+}
+.my-soul-bold {
+  font-family: "My Soul", cursive;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.latest-products{
+   text-transform: uppercase;
+   font-weight: 600;
+   font-size: 1.5rem;
+   color: #000;
+   text-align: center;
+   margin-top: 2rem;
+   margin-bottom: 2rem;
+   font-family: 'Montserrat', sans-serif;
 }
 
 /*.headings{

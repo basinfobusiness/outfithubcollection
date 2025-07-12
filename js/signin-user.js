@@ -22,7 +22,7 @@
 const signinBtn = document.getElementById("signin-btn");
 const regstatus = document.getElementById("reg-status");
 const regstatusText = ["Account does not exist","Successfully logged in","Processing please wait...","Wrong account details","Something went wrong"];
-signinBtn.addEventListener('click',(event)=>{
+signinBtn.addEventListener('submit',(event)=>{
     event.preventDefault();
     
     signinBtn.innerHTML = "<span class='spinner-border text-light'></span>";
