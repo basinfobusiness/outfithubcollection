@@ -31,15 +31,15 @@
 				<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#mainmenu"><span class="navbar-toggler-icon"></span></button>
 				<div class="collapse navbar-collapse" id="mainmenu">
 					<ul class="navbar-nav me-auto">
-						<li class="nav-item"><a class="nav-link" href="index.html">HOME</a></li>
-						<li class="nav-item"><a class="nav-link" href="shop.html">SHOP</a></li>
-						<li class="nav-item"><a class="nav-link" href="why.html">WHY US</a></li>
-						<li class="nav-item"><a class="nav-link" href="testimonial.html">TESTIMONIAL</a></li>
-						<li class="nav-item"><a class="nav-link" href="java">CONTACT US</a></li>
+						<li class="nav-item"><a class="nav-link" href="./index.html">HOME</a></li>
+						<li class="nav-item"><a class="nav-link" href="./shop.html">SHOP</a></li>
+						<li class="nav-item"><a class="nav-link" href="./why.html">WHY US</a></li>
+						<li class="nav-item"><a class="nav-link" href="./testimonial.html">TESTIMONIAL</a></li>
+						<li class="nav-item"><a class="nav-link" href="javascript:void(0)">CONTACT US</a></li>
 					</ul>
 					<div class="d-flex">
 						<ul class="navbar-nav me-2">
-							<li class="nav-item"><a class="nav-link" href="https://outfithubcollection.com/login.html" target="_blank"><i class="bi bi-person-fill"></i> LOGIN</a></li>
+							<li class="nav-item"><a class="nav-link" href="https://outfithubcollection.com/sign-in/index.html" target="_blank"><i class="bi bi-person-fill"></i> LOGIN</a></li>
 							<li class="nav-item"><span><a class="nav-link" href="#cart" data-bs-toggle="offcanvas"><i class="bi bi-bag-fill"></i>&nbsp;<span class="badge bg-success" id="cart-quantity">0</span></a></span></li>
 							<li class="nav-item"><span><a class="nav-link" href="#search-item" data-bs-toggle="modal"> <i class="bi bi-search"></i></span></a></li>
 						</ul>
@@ -56,7 +56,7 @@
 					<iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Tabora+Number3+Accra+Ghana" width="600" height="400" frameborder="0" style="border:0; width: 100%; height:100%" allowfullscreen></iframe>
 				  </div>
 				  <div class="col-sm-6 col-md-6 col-lg-5" id="contact">
-					<form action="">
+					<form method="post">
 						<div class="form-group m-3 mt-5 mb-3">
 						   <input type="text" class="form-control" placeholder="Name">
 						</div>
@@ -66,23 +66,31 @@
 						<div class="form-group m-3 mb-3">
 						   <input type="tel" class="form-control" placeholder="Phone">
 						</div>
-						<div class="form-group m-3 mb-3">
+						<div class="form-group m-3 mb-4">
 							<textarea name="message" id="message" class="form-control" placeholder="Message"></textarea>
 						</div>
-						<center><button class="btn btn-danger mt-3 mb-3 text-uppercase">send</button></center>
+						<div class="d-flex justify-content-center mb-3">
+						  <button class="btn btn-danger text-uppercase">send</button>
+						</div>
 					</form>
 				  </div>
 			</div>
 			</div>
 		</div><br>
 		<!-- footer -->
-		<div class="container">
+		<div class="container-fluid mt-5">
 			<div class="text-bg-dark p-3">
 				<h3 class="text-center"><a href="javascript:void(0)" class="text-white"><i class="bi bi-facebook"></i></a>&nbsp;&nbsp;<a href="javascript:void(0)" class="text-white"><i class="bi bi-twitter"></i></a>&nbsp;&nbsp;<a href="javascript:void(0)" class="text-white"><i class="bi bi-instagram"></i></a>&nbsp;&nbsp;<a href="javascript:void(0)" class="text-white"><i class="bi bi-youtube"></i></a></h3>
 				<div class="row mt-5">
-					<div class="col">
+					<div class="col" id="about-us">
 						<h4 class="text-uppercase fw-bold">About us</h4>
 						<p>Trendy outfits for every occasion</p>
+						<p>Download on</p>
+						<div class="d-flex mx-auto my-auto">
+							<h5><a href="#" class="text-white" target="_blank" title="ios"><i class="bi bi-apple"></i></a></h5>&nbsp;&nbsp;
+							<h5><a href="#" class="text-white" target="_blank" title="windows"><i class="bi bi-windows"></i></a></h5>&nbsp;&nbsp;
+							<h5><a href="#" class="text-white" target="_blank" title="android"><i class="bi bi-android"></i></a></h5>&nbsp;&nbsp;
+						</div>
 					</div>
 					<div class="col">
 						<h4 class="text-uppercase fw-bold">Newsletter</h4>
@@ -91,15 +99,15 @@
 							<button class="btn btn-danger text-uppercase mt-3">subscribe</button>
 						</form>
 					</div>
-					<div class="col">
+					<div class="col" id="help-and-support">
 						<h4 class="text-uppercase fw-bold">Need Help</h4>
 						<p>Need assistance with shopping or shipping? Talk to customer support</p>
 					</div>
-					<div class="col">
+					<div class="col" id="contact-details">
 						<h4 class="text-uppercase fw-bold">Contact Us</h4>
 						<a href="" class="text-decoration-none text-white">
 			                <i class="bi bi-geo-alt-fill"></i>
-			                <span> Tabora number 3, Accra, Ghana </span>
+			                <span>Tabora number 3, Accra, Ghana</span>
 			            </a><br>
 			            <a href="tel:+233539275384" class="text-decoration-none text-white">
 			                <i class="bi bi-telephone"></i>
@@ -111,12 +119,23 @@
 			            </a>
 					</div>
 				</div><hr class="mx-auto my-auto mt-3 w-75">
-				<p class="text-center mt-3">
-		          &copy; <span id="displayYear"></span> All Rights Reserved Powered By
-		          <a href="https://bit.ly/basonlinegh" target="_blank" class="text-decoration-none text-white">Benit Apollo Solutions</a>
-        		</p>
+				<div class="mt-3">
+					<div class="d-flex justify-content-center">
+						<a class="text-decoration-none text-white" href="javascript:void(0)">Terms</a>&nbsp;&nbsp;
+						<a href="javascript:void(0)" class="text-decoration-none text-white">Privacy</a>&nbsp;&nbsp;
+						<a href="javascript:void(0)" class="text-decoration-none text-white">YourPrivacyChoices</a>
+					</div>
+		          	<div class="text-center mt-2">
+		          		<p class="text-uppercase">Outfit Hub Collection</p>
+		          		<p class="text-capitalize">outfithubcollection.com</p>
+		          		<small class="text-muted">All rights reserved</small><br>
+		          		<small class="text-muted">Version 1.0.0</small>
+						&copy; <span id="displayYear"></span> All Rights Reserved Powered By
+		          		<a href="https://bit.ly/basonlinegh" target="_blank" class="text-decoration-none text-white">Benit Apollo Solutions</a>
+					</div>
+        		</div>
 			</div>
-		</div><br>
+		</div>
 		<!-- Search Item -->
 		<div class="modal fade" id="search-item">
 			<div class="modal-dialog modal-dialog-centered">
