@@ -314,65 +314,156 @@
 		<div class="p-3 rounded-circle" id="tech_support" style="background: #FFC300;">
                 <h1 class="text-center" data-bs-toggle="offcanvas" data-bs-target="#tech-support"><i class="bi bi-cart4"></i></h1>
          </div> -->
+
          <!-- Cart -->
          <div class="offcanvas offcanvas-end" id="cart">
          	<div class="offcanvas-header">
-         		<h3 class="offcanvas-title">Cart</h3>
-         		<button type="button" class="btn-close" data-bs-toggle="offcanvas"></button>
+         		<h3 class="offcanvas-title"><i class="bi bi-cart"></i>&nbsp;Cart</h3>
+         		<button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
          	</div>
          	<div class="offcanvas-body">
-         		<p>Available Products</p>
+         		<h4><i class="bi bi-box"></i>&nbsp;Available Products</h4>
 				<div>
 					<!-- Cart items will be dynamically added here -->
-					 <table class="table table-hover">
+					 <div class="table-responsive">
+						<table class="table table-hover">
+							<thead>
+								<tr>
+									<th scope="col">Product</th>
+									<th scope="col">Price</th>
+									<th scope="col">Quantity</th>
+									<th scope="col">Total</th>
+									<th scope="col">Action</th>
+								</tr>
+							</thead>
+							<tbody id="cart-items">
+								<!-- Cart items will be dynamically added here -->
+							</tbody>
+							<tfoot>
+								<tr>
+									<td colspan="3" class="text-end">Total:</td>
+									<td id="cart-total">$0.00</td>
+									<td><button class="btn btn-danger" id="clear-cart-btn">Clear Cart</button></td>
+								</tr>
+							</tfoot>
+					 	</table>
+					 </div>
+					 <div class="d-flex justify-content-end">
+						 <button class="btn btn-primary" id="checkout-btn"><i class="bi bi-check-circle"></i>&nbsp;Checkout</button>
+					 </div>	
+				</div>
+				<!-- Cart Summary -->
+				 <div id="cart-summary" class="mt-5 collapse">
+					<h4 class="mt-5"><i class="bi bi-cart-check"></i>&nbsp;Cart Summary</h4>
+					<p class="mt-3">Your cart is currently empty. Add products to your cart to view them here.</p>
+					<p>For any issues or questions, please contact our support team.</p>
+					<p>For any issues or questions, please contact our support team.</p>
+					<p>Your cart is currently empty. Add products to your cart to view them here.</p>
+					<p>For any issues or questions, please contact our support team.</p>
+					<p>We are here to assist you with your shopping experience.</p>
+					<p>Thank you for choosing Outfit Hub Collection!</p>
+					<p>We appreciate your business and look forward to serving you again.</p>
+					<p>For any issues or concerns, please contact our support team.</p>
+				 </div>
+				
+				<!-- Wishlist -->
+				<h4 class="mt-5"><i class="bi bi-heart"></i>&nbsp;Wishlist</h4>
+				<div class="collapse show" id="wishlist-current">
+					<p>Your wishlist is currently empty. Add products to your wishlist to view them here.</p>
+					<p>For any issues or questions, please contact our support team.</p> 
+				</div>
+				<div class="table-responsive collapse" id="wishlist-table">
+					<table class="table table-hover">
 						<thead>
 							<tr>
 								<th scope="col">Product</th>
 								<th scope="col">Price</th>
-								<th scope="col">Quantity</th>
-								<th scope="col">Total</th>
-								<th scope="col">Action</th>
-							</tr>
-						</thead>
-						<tbody id="cart-items">
-							<!-- Cart items will be dynamically added here -->
-						</tbody>
-						<tfoot>
-							<tr>
-								<td colspan="3" class="text-end">Total:</td>
-								<td id="cart-total">$0.00</td>
-								<td><button class="btn btn-danger" id="clear-cart-btn">Clear Cart</button></td>
-							</tr>
-						</tfoot>
-					 </table>
-					 <!-- Wishlist -->
-					 <h4 class="mt-5">Wishlist</h4>
-					 <table class="table table-hover">
-						<thead>
-							<tr>
-								<th scope="col">Product</th>
-								<th scope="col">Price</th>
+								<th scope="col">Quality</th>
 								<th scope="col">Action</th>
 							</tr>
 						</thead>
 						<tbody id="wishlist-items">
 							<!-- Wishlist items will be dynamically added here -->
 						</tbody>
-						<tfoot>
-							<tr>
-								<td colspan="2" class="text-end">Total:</td>
-								<td id="wishlist-total">$0.00</td>
-							</tr>
-						</tfoot>
-				</table>	
-
+					</table>
 				</div>
-         	</div>
-         </div>
+				<div id="accordion" class="accordion mt-5">
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="headingOne">
+							<button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+								<i class="bi bi-truck"></i>&nbsp;Shipping Information
+							</button>
+						</h2>
+						<div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordion">
+							<div class="accordion-body">
+								<p>We offer free shipping on all orders over $50. For orders below $50, a flat shipping fee of $5 will be applied.</p>
+								<p>Estimated delivery time is 3-5 business days.</p>
+								<p>For international shipping, please contact our support team for rates and delivery times.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="accordion" class="accordion mt-3">
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="headingTwo">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+								<i class="bi bi-credit-card"></i>&nbsp;Payment Information
+							</button>
+						</h2>
+						<div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordion">
+							<div class="accordion-body">
+								<p>We accept all major credit cards, PayPal, and bank transfers.</p>
+								<p>For any payment-related issues, please contact our support team.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div id="accordion" class="accordion mt-3">
+					<div class="accordion-item">
+						<h2 class="accordion-header" id="headingThree">
+							<button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+								<i class="bi bi-arrow-return-left"></i>&nbsp;Returns and Refunds
+							</button>
+						</h2>
+						<div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordion">
+							<div class="accordion-body">
+								<p>We accept returns within 30 days of purchase. Please ensure the items are in their original condition.</p>
+								<p>Refunds will be processed within 7-10 business days after receiving the returned items.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+		 	</div>
+		 </div>
+		 <!-- Tech Support -->
+		 <div class="offcanvas offcanvas-start" id="tech-support">
+		 	<div class="offcanvas-header">
+		 		<h3 class="offcanvas-title">Tech Support</h3>
+		 		<button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+		 	</div>
+		 	<div class="offcanvas-body">
+		 		<p>Need help with your order? Contact our support team.</p>
+				<p>Email:<a href="mailto:support@example.com">support@example.com</a></p>
+				<p>We are available 24/7 to assist you with any issues or questions you may have.</p>
+				<p>For urgent inquiries, please call our support hotline at +233539275384.</p>
+				<p>We value your feedback and are here to help you with your shopping experience.</p>
+				<!-- Shipping Information -->
+				<h4 class="mt-3">Shipping Information</h4>
+				<p>We offer free shipping on all orders over $50. For orders below $50, a flat shipping fee of $5 will be applied.</p>
+				<p>Estimated delivery time is 3-5 business days.</p>
+				<p>For international shipping, please contact our support team for rates and delivery times.</p>
+				<p>Phone: +233539275384</p>
+				<p>For any inquiries, please email us at <a href="mailto:support@example.com">support@example.com</a></p>
+				<p>We are here to assist you with any questions or concerns you may have.</p>
+				<p>Thank you for choosing Outfit Hub Collection!</p>
+				<p>We appreciate your business and look forward to serving you again.</p>
+				<p>For any issues or concerns, please contact our support team.</p>
+		 	</div>
+		</div>
 		<script src="./js/product.js"></script>
 		<!-- <script type="module" src="./catalog.js"></script> -->
-		 <!-- Attributes -->
-		 <!-- <a href="https://iconscout.com/icons/louis-vuitton" class="text-underline font-size-sm" target="_blank">louis vuitton</a> by <a href="https://iconscout.com/contributors/maninderkaur" class="text-underline font-size-sm" target="_blank">maninderkaur</a> -->
-		  <!-- <a href="https://iconscout.com/icons/puma" class="text-underline font-size-sm" target="_blank">Puma</a> by <a href="https://iconscout.com/contributors/viconsdesign" class="text-underline font-size-sm">Vicons Design</a> on <a href="https://iconscout.com" class="text-underline font-size-sm">IconScout</a> -->
+		<!-- Attributes -->
+		<!-- <a href="https://iconscout.com/icons/louis-vuitton" class="text-underline font-size-sm" target="_blank">louis vuitton</a> by <a href="https://iconscout.com/contributors/maninderkaur" class="text-underline font-size-sm" target="_blank">maninderkaur</a> -->
+		<!-- <a href="https://iconscout.com/icons/puma" class="text-underline font-size-sm" target="_blank">Puma</a> by <a href="https://iconscout.com/contributors/viconsdesign" class="text-underline font-size-sm">Vicons Design</a> on <a href="https://iconscout.com" class="text-underline font-size-sm">IconScout</a> -->
 	</body>
 </html>
