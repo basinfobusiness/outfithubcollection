@@ -23,26 +23,6 @@ let productDetails = document.getElementById("product-details");
 let wishlistCstaus = document.getElementById("wishlist-current");
 let wishlistTable = document.getElementById("wishlist-table");
 
-// select product
-
-(()=>{
-   'use strict';
-   let productList = ["Luis Vuitton Forest Green","Puma Pink & White","Puma Navy Blue & White","Nike Air Force 1","Nike Air Force 1 Black","Nike Air Force 1 Carmo"];
-   for(let i = 0; i < productListNode.length && i < productList.length; i++) {
-	   productListNode[i].textContent = productList[i];
-   }
-   // Add click event to each card to set the bid price
-   let cards = document.querySelectorAll('.card');
-   cards.forEach((card, idx) => {
-	   card.addEventListener('click', function() {
-		   let priceElem = card.querySelector('.card-text');
-		   if (priceElem) {
-			   product_price.textContent = priceElem.textContent;
-		   }
-	   });
-   });
-})();
-
 // add to cart
 addCartBtn.addEventListener('click',(e)=>{
 	e.preventDefault();
@@ -74,7 +54,7 @@ function loadToCart(){
 	productDetails.textContent = `Purchase ${productNameText} now`;
 	productDetails.classList.add("text-success");
 	product_quality.classList.add("text-secondary");
-	console.log("Function product name " + productNameText);
+	// console.log("Function product name " + productNameText);
 
 	const productQuality = {
 		"puma": "1, buyer promise, return policy, shipping policy, 0 sold",
@@ -111,32 +91,22 @@ function productAdded() {
 	// loadToCart();
 	productcart.textContent = productquantity.value;
 	let productQuantity = productcart.textContent;
-	// let totalPrice = Number(productQuantity) * parseFloat(this.parentElement.parentElement.querySelector('.card-text').textContent.replace(/[^0-9.-]+/g,""));
 	let productprice = product_price.textContent.replace(/[^0-9.-]+/g,"");
 	let totalPrice = Number(productQuantity) * parseFloat(productprice);
-	// let productNameText = this.parentElement.parentElement.querySelector('.card-title').textContent;
-	// productName.textContent = productNameText;
 	let productNameText = document.getElementById("product-name").textContent;
 	cartItems.classList.remove("visually-hidden");
 	cartItems.classList.add("text-success");
-	// let productInCart = sessionStorage.getItem("Product_In_Cart");
-	// if(productInCart !== null){
-		cartItems.innerHTML += `<tr class="text-success">
+	cartItems.innerHTML += `<tr class="text-success">
 		<td class="text-success">${productNameText}</td>
 		<td class="text-success">${product_price.textContent}</td>
 		<td class="text-success">${productQuantity}</td>
 		<td class="text-success total-price">$ ${totalPrice}</td>
 		<td class="text-success"><button class="btn btn-danger btn-sm" id="remove-cart-btn">Remove</button></td>
 	</tr>`;
-	// let totalPrices = [];
-	// totalPrices.push(totalPrice);
-	// let _totalPrices = 0;
-	// console.log("the _totalprices is " + _totalPrices);
-	// for(let i=0; i<totalPrices.length; i++){
-	// 	totalPrices[i] += totalPrices[i];
-	// 	console.log("Final prices length is " + totalPrices.length);
-	// }
 	let sumoftotalPrice = 0;
+	sessionStorage.setItem("ProductCart", productcart.textContent);
+	sessionStorage.setItem("CartItems", cartItems.innerHTML);
+
 	document.querySelectorAll('.total-price').forEach(el => {
 		// Extract numeric value from text, e.g., "¢150.00" -> 150.00
 		let price = parseFloat(el.textContent.replace(/[^0-9.]/g, ''));
@@ -148,9 +118,7 @@ function productAdded() {
 
 	// console.log('Total Price:', sumoftotalPrice);
 
-	productquantity.value = 1
-	
-	// }else{
+	productquantity.value = 1;
 	// 	cartItems.innerHTML = "";
 	// }
 
@@ -209,35 +177,12 @@ cartBtn6.addEventListener('click',loadToCart);
 
 toCartBtn.addEventListener('click', productAdded,true);
 
-// toCartBtn.addEventListener('click',(e)=>{
-// 	e.preventDefault();
-// 	// alert("Product added to cart");
-// 	let productNameText = productName.textContent;
-// 	let productPrice = document.getElementById("product-price").textContent;
-// 	let productQuality = document.getElementById("quality").textContent;
-// 	let productQuantity = productcart.textContent;
-// 	let cartItems = document.getElementById("cart-items");
-// 	let totalPrice = Number(productQuantity) * parseFloat(this.parentElement.parentElement.querySelector('.card-text').textContent.replace(/[^0-9.-]+/g,""));
-// 	cartTotal.textContent = `$ ${totalPrice.toFixed(2)}`;
-// 	cartItems.classList.remove("visually-hidden");
-// 	cartItems.classList.add("text-success");
-// 	cartItems.innerHTML += `<tr class="text-success">
-// 		<td class="text-success">${productNameText}</td>
-// 		<td class="text-success">${productPrice}</td>
-// 		<td class="text-success">${productQuality}</td>
-// 		<td class="text-success">${productQuantity}</td>
-// 		<td class="text-successf">${totalPrice}</td>
-// 		<td class="text-success"><button class="btn btn-danger btn-sm" id="remove-cart-btn">Remove</button></td>
-// 	</tr>`;
-// });
-
 toWishlistBtn.addEventListener('click',(e)=>{
 	e.preventDefault();
 	// alert("Product added to wishlist");
 	wishlistCstaus.classList.remove("show");
 	wishlistTable.classList.add("show");
 	let productNameText = productName.textContent;
-	// let productQuality = document.getElementById("quality").textContent;
 	let wishlistItems = document.getElementById("wishlist-items");
 	wishlistItems.classList.remove("visually-hidden");
 	wishlistItems.classList.add("text-success");
@@ -248,6 +193,33 @@ toWishlistBtn.addEventListener('click',(e)=>{
 		<td class="text-success"><button class="btn btn-danger btn-sm">Remove</button></td>
 	</tr>`;
 });
+
+// select product
+(()=>{
+   'use strict';
+   const productList = ["Luis Vuitton Forest Green","Puma Pink & White","Puma Navy Blue & White","Nike Air Force 1","Nike Air Force 1 Black","Nike Air Force 1 Carmo"];
+   for(let i = 0; i < productListNode.length && i < productList.length; i++) {
+	   productListNode[i].textContent = productList[i];
+   }
+   // Add click event to each card to set the bid price
+   let cards = document.querySelectorAll('.card');
+   cards.forEach((card, idx) => {
+	   card.addEventListener('click', function() {
+		   let priceElem = card.querySelector('.card-text');
+		   if (priceElem) {
+			   product_price.textContent = priceElem.textContent;
+		   }
+	   });
+   });
+
+	let _productCart = sessionStorage.getItem("ProductCart");
+	let _cartItems = sessionStorage.getItem("CartItems");
+
+	if(_cartItems !== null && _productCart !== null){
+		productcart.textContent = _productCart;
+		cartItems.innerHTML += _cartItems;
+	}
+})();
 
 var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
 var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
